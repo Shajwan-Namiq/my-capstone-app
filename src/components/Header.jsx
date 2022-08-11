@@ -1,10 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "flowbite-react";
+import {Link}  from "react-router-dom";
+ import Login from "./buttons/Login"
 import { useState } from "react";
+ 
 
 const Header = () => {
+
   const [navbar, setNavbar] = useState(false);
+ 
+
+
 
   return (
     <>
@@ -12,8 +17,8 @@ const Header = () => {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <a href="javascript:void(0)">
-                <h2 className="text-2xl font-bold text-white">LOGO</h2>
+              <a href="https://tailwindui.com/">
+                <h2 className="text-2xl mx-auto font-bold text-white">LOGO</h2>
               </a>
               <div className="md:hidden">
                 <button
@@ -64,45 +69,21 @@ const Header = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="text-white hover:text-indigo-200">
+                  <Link to="/product">Product</Link>
+                </li>
+                <li className="text-white hover:text-indigo-200">
                   <Link to="/about">About</Link>
                 </li>
                 <li className="text-white hover:text-indigo-200">
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li className="text-white hover:text-indigo-200">
-                  <Link to="/product">Product</Link>
+
+                <li>
+                  {/**<!-- Modal toggle --> */}
+                  <Login />
                 </li>
               </ul>
-
-              <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                <a
-                  href="javascript:void(0)"
-                  className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                >
-                  Sign in
-                </a>
-                <a
-                  href="javascript:void(0)"
-                  className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                >
-                  Sign up
-                </a>
-              </div>
             </div>
-          </div>
-          <div className="hidden space-x-2 md:inline-block">
-            <a
-              href="javascript:void(0)"
-              className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-            >
-              Sign in
-            </a>
-            <a
-              href="javascript:void(0)"
-              className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-            >
-              Sign up
-            </a>
           </div>
         </div>
       </nav>

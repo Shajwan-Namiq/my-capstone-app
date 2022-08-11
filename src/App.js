@@ -8,6 +8,7 @@ import About  from "./components/About";
 import Product from "./components/Product";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+ 
 
 function App() {
   return (
@@ -19,22 +20,10 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="product" element={<Product />} />
           <Route path="contact" element={<Contact />} />
+       
         </Routes>
         <Footer />
       </BrowserRouter>
-
-
-
-
-
-
-
-
-
-
-
-
-      
     </>
   );
 }
