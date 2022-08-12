@@ -1,15 +1,11 @@
 import React from "react";
-import {Link}  from "react-router-dom";
- import Login from "./buttons/Login"
+import { Link } from "react-router-dom";
+import Login from "./buttons/Login";
+import Signup from "./buttons/Signup";
 import { useState } from "react";
- 
 
 const Header = () => {
-
   const [navbar, setNavbar] = useState(false);
- 
-
-
 
   return (
     <>
@@ -81,6 +77,7 @@ const Header = () => {
                 <li>
                   {/**<!-- Modal toggle --> */}
                   <Login />
+                  <Signup />
                 </li>
               </ul>
             </div>

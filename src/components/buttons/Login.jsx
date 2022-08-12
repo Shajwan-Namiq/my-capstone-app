@@ -6,16 +6,14 @@ function Login() {
  
   return (
     <>
-     
-
       <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block">
         <button
           type="button"
-          className="flex flex-row justify-center w-full px-6 py-2.5 bg-slate-50 text-gray-800 text-xs rounded-md shadow hover:bg-slate-500"
+          className="flex flex-row justify-center w-full px-4 py-2.5 bg-slate-50 text-gray-800  rounded-md shadow hover:bg-slate-500"
           data-bs-toggle="modal"
           data-bs-target="#loginModal"
         >
-          <FaUser />
+          <FaUser size={20} />
           <span className="px-3">Login</span>
         </button>
       </div>
