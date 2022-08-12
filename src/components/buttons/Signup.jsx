@@ -5,14 +5,14 @@ import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
 function Signup() {
   return (
     <>
-      <div className="mt-3 sm:mx-3 flex flex-shrink-0 flex-wrap items-center lg:inline-block">
+      <div className="mt-3 sm:mx-3 flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
           className=" w-full flex flex-row justify-center  px-4 py-2.5 bg-slate-50 text-gray-800  rounded-md shadow hover:bg-slate-500"
           data-bs-toggle="modal"
           data-bs-target="#SignupModal"
         >
-          <FaUserPlus size={20}/>
+          <FaUserPlus size={20} />
           <span className="px-3">Sign Up</span>
         </button>
       </div>

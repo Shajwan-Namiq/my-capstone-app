@@ -6,7 +6,7 @@ function Login() {
  
   return (
     <>
-      <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block">
+      <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
           className="flex flex-row justify-center w-full px-4 py-2.5 bg-slate-50 text-gray-800  rounded-md shadow hover:bg-slate-500"
