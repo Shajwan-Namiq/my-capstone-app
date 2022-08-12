@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Login from "./buttons/Login";
 import Signup from "./buttons/Signup";
 import { useState } from "react";
+import MyImage from "./images/Eshop.png";
+
+
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -12,10 +15,14 @@ const Header = () => {
       <nav className="w-full bg-sky-900 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <a href="https://tailwindui.com/">
-                <h2 className="text-2xl mx-auto font-bold text-white">LOGO</h2>
+            <div className="mx-auto flex fle-auto items-center justify-between py-3 md:py-5 md:block">
+              <a
+                href="https://endearing-crepe-c9a44e.netlify.app/"
+                class="flex items-center"
+              >
+                <img src={MyImage} class="mr-3 h-6 sm:h-9" alt="Logo" />
               </a>
+
               <div className="md:hidden">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
