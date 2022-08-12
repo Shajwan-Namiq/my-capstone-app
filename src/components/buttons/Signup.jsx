@@ -115,7 +115,7 @@ function Signup() {
             <div className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4    rounded-b-md">
               <button
                 type="button"
-                className="mt-8 w-full px-6 py-2.5 bg-cyan-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
+                className="mt-5 w-full px-6 py-2.5 bg-cyan-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
               >
                 Register
               </button>
