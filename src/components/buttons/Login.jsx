@@ -9,7 +9,7 @@ function Login() {
       <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
-          className="flex flex-row justify-center w-full px-4 py-2.5 bg-slate-50 text-gray-800  rounded-md shadow hover:bg-slate-500"
+          className="flex flex-row justify-center w-full px-1 py-2.5 border  text-slate-200  rounded-md shadow hover:bg-[#081927]"
           data-bs-toggle="modal"
           data-bs-target="#loginModal"
         >
@@ -72,7 +72,7 @@ function Login() {
                   type="email"
                   name="email"
                   id="email"
-                  className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black"
+                  className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
                   placeholder="shajwan@company.com"
                   required
                 />
@@ -89,7 +89,7 @@ function Login() {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black"
+                  className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
                   required
                 />
               </div>

@@ -19,9 +19,9 @@ const Header = () => {
             <div className="mx-auto flex fle-auto items-center justify-between py-3 md:py-5 md:block">
               <a
                 href="https://endearing-crepe-c9a44e.netlify.app/"
-                class="flex items-center"
+                className="flex items-center"
               >
-                <img src={MyImage} class="mr-3 h-6 sm:h-9" alt="Logo" />
+                <img src={MyImage} className="mr-3 h-6 sm:h-9" alt="Logo" />
               </a>
 
               <div className="md:hidden">
