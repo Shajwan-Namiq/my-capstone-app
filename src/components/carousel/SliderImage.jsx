@@ -2,7 +2,7 @@ import First from "../images/fs.jpg";
 import Second from "../images/fs2.jpg";
 import Third from "../images/fs3.jpg";
 
-export default [
+const sliderImage = [
   {
     title: "First Slide",
     description: "This is the first slider Image of our carousel",
@@ -18,5 +18,7 @@ export default [
     description: "This is the Third slider Image of our carousel",
     urls: Third,
   },
-    
-];
+]
+
+ 
+ export default sliderImage ;
