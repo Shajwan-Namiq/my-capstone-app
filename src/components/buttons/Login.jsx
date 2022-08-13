@@ -71,8 +71,8 @@ function Login() {
                 <input
                   type="email"
                   name="email"
-                  id="email"
-                  className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
+                  id="email_ID"
+                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
                   placeholder="shajwan@company.com"
                   required
                 />
@@ -87,9 +87,9 @@ function Login() {
                 <input
                   type="password"
                   name="password"
-                  id="password"
-                  placeholder="*****"
-                  className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
+                  id="password_ID"
+                  placeholder=" ***** "
+                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
                   required
                 />
               </div>

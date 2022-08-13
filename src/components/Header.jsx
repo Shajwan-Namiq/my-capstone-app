@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full bg-[#012a4a] shadow">
+      <nav className="w-full  bg-[#012a4a] shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="mx-auto flex fle-auto items-center justify-between py-3 md:py-5 md:block">
@@ -69,7 +69,7 @@ const Header = () => {
               }`}
             >
               <ul className="items-center justify-center  space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-white hover:text-indigo-200">
+                <li className=" text-white hover:text-indigo-200 ">
                   <Link to="/">Home</Link>
                 </li>
                 <li className="text-white hover:text-indigo-200">
@@ -86,7 +86,7 @@ const Header = () => {
                 <li>
                   <Login />
                   <Signup />
-                  <CartBtn  />
+                  <CartBtn />
                 </li>
               </ul>
             </div>

@@ -13,6 +13,8 @@ function CartBtn() {
           <FaShoppingCart className="mx-2" /> Cart(0)
         </NavLink>
       </div>
+
+
     </>
   );
 }
