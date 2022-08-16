@@ -4,7 +4,7 @@ import Login from "./buttons/Login";
 import Signup from "./buttons/Signup";
 import CartBtn  from "./buttons/CartBtn";
 import { useState } from "react";
-import MyImage from "./images/Eshop.png";
+import MyImage from "./images/Eshoplogo.png";
 
 
 
@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full  bg-[#012a4a] shadow">
+      <nav className="w-full  bg-[#e9ecef] shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="mx-auto flex fle-auto items-center justify-between py-3 md:py-5 md:block">
@@ -26,13 +26,13 @@ const Header = () => {
 
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 text-gray-700 rounded-md outline-none focus:border-orange-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-orange-400"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -64,22 +64,32 @@ const Header = () => {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+              className={`flex-1 justify-self-center pb-3 mt-5 md:block md:pb-0 md:mt-0 ${
                 navbar ? "block" : "hidden"
               }`}
             >
               <ul className="items-center justify-center  space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className=" text-white hover:text-indigo-200 ">
-                  <Link to="/">Home</Link>
+                <li className="text-orange-400 hover:text-[#081927] ">
+                  <Link to="/" className=" border-navbar">
+                    Home
+                  </Link>
                 </li>
-                <li className="text-white hover:text-indigo-200">
-                  <Link to="/product">Product</Link>
+              
+                
+                <li className=" text-orange-400 hover:text-[#081927] ">
+                  <Link to="/product" className="border-navbar">
+                    Product
+                  </Link>
                 </li>
-                <li className="text-white hover:text-indigo-200">
-                  <Link to="/about">About</Link>
+                <li className=" text-orange-400 hover:text-[#081927] ">
+                  <Link to="/about" className="border-navbar">
+                    About
+                  </Link>
                 </li>
-                <li className="text-white hover:text-indigo-200">
-                  <Link to="/contact">Contact</Link>
+                <li className=" text-orange-400 hover:text-[#081927] ">
+                  <Link to="/contact" className="border-navbar">
+                    Contact
+                  </Link>
                 </li>
 
                 {/**<!-- Modal toggle --> */}
@@ -98,3 +108,5 @@ const Header = () => {
 };
 
 export default Header;
+
+ 

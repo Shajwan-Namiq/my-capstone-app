@@ -1,17 +1,21 @@
 import React from 'react'
-import sofa from "./images/sofa.png"; 
+import sofa from "./images/sofa3.jpg"; 
 
 
 
 export default function About() {
   return (
     <>
-      <section class=" flex flex-col justify-center antialiased  min-h-screen">
+      <section class=" flex flex-col justify-center antialiased min-h-screen">
         <div class="max-w-6xl mx-auto p-4 sm:px-6 h-full">
           <article class="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
-            <a class="relative block group" href="#0">
+            <a class="mt-12 md:mt-12 lg:mt-0 relative block group" href="#0">
               <div
-                class="absolute inset-0 bg-gray-800 hidden md:block transform md:translate-y-2 md:translate-x-4 xl:translate-y-14 xl:translate-x-8 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out pointer-events-none"
+                class="absolute inset-0 bg-orange-400 hidden md:block transform md:translate-y-2 md:translate-x-4 xl:translate-y-8 xl:translate-x-8 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out pointer-events-none"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="absolute inset-0 bg-[#e9ecef] hidden md:block transform md:translate-y-2 md:translate-x-4 xl:translate-y-4 xl:translate-x-5 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out pointer-events-none"
                 aria-hidden="true"
               ></div>
               <figure class="relative h-0 pb-[56.25%] md:pb-[75%] lg:pb-[56.25%] overflow-hidden transform md:-translate-y-2 xl:-translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out">
@@ -20,10 +24,11 @@ export default function About() {
                   src={sofa}
                   width="540"
                   height="400"
-                  alt="Blog post"
+                  alt="sofa"
                 />
               </figure>
             </a>
+
             <div>
               <header>
                 <h3 class="mt-30 text-2xl lg:text-3xl font-bold leading-tight mb-2">
@@ -31,7 +36,7 @@ export default function About() {
                     class="text-slate-900 hover:text-gray-700 transition duration-150 ease-in-out"
                     href="#0"
                   >
-                    <h1 className="border-b-4 border-zinc-300 text-2xl text-slate-600 font-bold">
+                    <h1 className="border-b-4 border-[#081927] text-2xl text-slate-600 font-bold">
                       About Us
                     </h1>
                   </a>
@@ -49,10 +54,9 @@ export default function About() {
                 ut quibusdam, suscipit molestiae hic nihil corporis deleniti
                 quia quidem voluptatum error dignissimos a qui nisi cum quisquam
                 architecto! Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. 
+                elit.
               </p>
-             
-             
+
               <footer class="flex items-center mt-4">
                 <a href="#0">
                   <img
@@ -63,7 +67,7 @@ export default function About() {
                     alt="Author 04"
                   />
                 </a>
-               
+
                 <div>
                   <a
                     class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"

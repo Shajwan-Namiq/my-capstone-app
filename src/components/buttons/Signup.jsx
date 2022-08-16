@@ -8,7 +8,7 @@ function Signup() {
       <div className="mt-3 sm:mx-3 flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
-          className=" w-full flex flex-row justify-center  px-4 py-2.5 border text-slate-200  rounded-md shadow hover:bg-[#081927]"
+          className=" w-full flex flex-row justify-center  px-1 py-2  text-orange-400  rounded-md outline outline-offset-2 outline-2 hover:bg-gray-900"
           data-bs-toggle="modal"
           data-bs-target="#SignupModal"
         >
