@@ -1,4 +1,7 @@
 import React from 'react'
+ import { FaRegPaperPlane } from "react-icons/fa";
+
+
 
 export default function Contact() {
   return (
@@ -50,8 +53,10 @@ export default function Contact() {
                 class="w-full bg-white rounded border border-gray-300 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <button class="text-white bg-orange-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg">
-              Send
+            <button class="flex flex-row justify-center font-bold text-white bg-orange-400 border-0 py-2  focus:outline-none hover:bg-gray-400 rounded text-lg">
+                <span className="px-3">Send</span>
+                <FaRegPaperPlane size={20} />
+            
             </button>
           </div>
         </div>
