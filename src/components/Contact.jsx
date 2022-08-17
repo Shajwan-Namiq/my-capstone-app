@@ -1,9 +1,48 @@
 import React from 'react'
  import { FaRegPaperPlane } from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 
 
 export default function Contact() {
+
+
+/**submission form using EmailJS */
+
+ const form = useRef();
+ 
+
+ const sendEmail = (e) => {
+   e.preventDefault();
+
+   emailjs
+     .sendForm(
+       "service_rd16j9m",
+       "template_se6s2md",
+       form.current,
+       "2Y4IOB6zCNHcvDgF-"
+     )
+     .then(
+       (result) => {
+         console.log(result.text);
+         alert("Message sent!");
+         e.target.reset();  //for clearing input after submission
+       },
+       (error) => {
+         console.log(error.text);
+       }
+     );
+ };
+
+
+
+
+
+
+
+
+
   return (
     <div>
       <section class="text-gray-600 body-font relative">
@@ -19,47 +58,53 @@ export default function Contact() {
             ></iframe>
           </div>
         </div>
-        <div class="container px-5 py-24 mx-auto flex">
-          <div class="lg:w-1/3 md:w-1/2 bg-[#ebebebda] rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-            <h1 className="text-2xl text-slate-600 font-bold">Contact Us</h1>
-            <p class="leading-relaxed mb-5 text-gray-600">
-              For more information, please fill in this form
-            </p>
-            <div class="relative mb-4">
-              <input
-                type="text"
-                placeholder="UserName"
-                id="username"
-                name="username"
-                class="w-full bg-white rounded border border-orange-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
 
-            <div class="relative mb-4">
-              <input
-                type="email"
-                placeholder="Email Address"
-                id="email"
-                name="email"
-                class="w-full bg-white rounded border border-orange-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
+        <form ref={form} onSubmit={sendEmail}>
+          <div class="container px-5 py-24 mx-auto flex">
+            <div class="lg:w-1/3 md:w-1/2 bg-[#ebebebda] rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+              <h1 className="text-2xl text-slate-600 font-bold">Contact Us</h1>
+              <p class="leading-relaxed mb-5 text-gray-600">
+                For more information, please fill in this form
+              </p>
+              <div class="relative mb-4">
+                <input
+                   
+                  type="text"
+                  placeholder="UserName"
+                  id="username"
+                  name="username"
+                  class="w-full bg-white rounded border border-orange-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
 
-            <div class="relative mb-4">
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                class="w-full bg-white rounded border border-gray-300 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <button class="flex flex-row justify-center font-bold text-white bg-orange-400 border-0 py-2  focus:outline-none hover:bg-gray-400 rounded text-lg">
+              <div class="relative mb-4">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  id="email"
+                  name="email"
+                  class="w-full bg-white rounded border border-orange-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+
+              <div class="relative mb-4">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  class="w-full bg-white rounded border border-gray-300 focus:border-orange-400 focus:ring-2 focus:ring-orange-400 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <button
+                type="submit"
+                class="flex flex-row justify-center font-bold text-white bg-orange-400 border-0 py-2  focus:outline-none hover:bg-gray-400 rounded text-lg"
+              >
                 <span className="px-3">Send</span>
                 <FaRegPaperPlane size={20} />
-            
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </section>
     </div>
   );
