@@ -1,4 +1,32 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+
+
+function CartBtn() {
+  return (
+    <>
+      <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
+        <div className="flex flex-row justify-center w-full px-1 py-2  text-orange-400  rounded-md outline outline-offset-2 outline-2 hover:bg-gray-900">
+          <div className="mt-3 flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block ">
+            <NavLink to="/cart">
+              <FaShoppingCart className="mx-2" /> Cart(0)
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default CartBtn;
+
+
+
+
+
+/**
+ * import React from 'react'
 import {NavLink} from 'react-router-dom'
  import { FaShoppingCart } from "react-icons/fa";
 
@@ -20,3 +48,5 @@ function CartBtn() {
 }
 
 export default CartBtn
+
+ */
