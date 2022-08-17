@@ -1,6 +1,6 @@
-import First from "../images/fs3.jpg";
-import Second from "../images/fs2.jpg";
-import Third from "../images/fs.jpg";
+import First from "../images/f4.jpg";
+import Second from "../images/f3.jpg";
+import Third from "../images/f2.jpg";
 
 const sliderImage = [
   {

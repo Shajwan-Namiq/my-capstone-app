@@ -9,12 +9,12 @@ function Login() {
       <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
-          className="flex flex-row justify-center w-full px-1 py-2  text-orange-400  rounded-md outline outline-offset-2 outline-2 hover:bg-gray-900"
+          className="flex flex-row justify-center w-full px-1 py-2   text-orange-400  rounded-md outline outline-offset-2 outline-2 "
           data-bs-toggle="modal"
           data-bs-target="#loginModal"
         >
           <FaUser size={20} />
-          <span className="px-3">Login</span>
+          <span className="px-3 ">Login</span>
         </button>
       </div>
 

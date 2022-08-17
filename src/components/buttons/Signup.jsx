@@ -5,10 +5,10 @@ import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
 function Signup() {
   return (
     <>
-      <div className="mt-3 sm:mx-3 flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
+      <div className="flex flex-shrink-0 flex-wrap items-center lg:inline-block md:inline-block">
         <button
           type="button"
-          className=" w-full flex flex-row justify-center  px-1 py-2  text-orange-400  rounded-md outline outline-offset-2 outline-2 hover:bg-gray-900"
+          className=" w-full flex flex-row justify-center  px-1 py-2  text-orange-400  rounded-md outline outline-offset-2 outline-2  "
           data-bs-toggle="modal"
           data-bs-target="#SignupModal"
         >

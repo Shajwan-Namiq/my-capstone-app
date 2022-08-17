@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./buttons/Login";
 import Signup from "./buttons/Signup";
-import CartBtn  from "./buttons/CartBtn";
+import CartBtn from "./buttons/CartBtn";
 import { useState } from "react";
 import MyImage from "./images/Eshoplogo.png";
-
-
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -64,7 +62,7 @@ const Header = () => {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center pb-3 mt-5 md:block md:pb-0 md:mt-0 ${
+              className={`flex-1 place-items-center justify-self-center pb-3 mt-5 md:block md:pb-0 md:mt-0 ${
                 navbar ? "block" : "hidden"
               }`}
             >
@@ -103,7 +101,11 @@ const Header = () => {
                 {/**<!-- Modal toggle --> */}
                 <li>
                   <Login />
+                </li>
+                <li>
                   <Signup />
+                </li>
+                <li>
                   <CartBtn />
                 </li>
               </ul>
@@ -116,5 +118,3 @@ const Header = () => {
 };
 
 export default Header;
-
- 
