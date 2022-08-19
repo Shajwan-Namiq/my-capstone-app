@@ -1,4 +1,4 @@
-Create Ecommerice website
+Create Ecommerice website(ESHOP  furniture for home)
 using :
 
 -HTML
