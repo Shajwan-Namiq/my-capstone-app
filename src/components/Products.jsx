@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+ 
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -41,10 +41,15 @@ const Products = () => {
     );
   };
 
+
+
   const filterProduct = (cat) => {
     const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
   };
+
+
+
 
   const ShowProducts = () => {
     return (
@@ -87,25 +92,22 @@ const Products = () => {
           </div>
         </div>
 
-     
-     
-     
-        <div className="mb-20">
+        <div className=" grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 gap-2">
           {filter.map((product) => {
             return (
               <>
                 <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
                     <img
-                      class="p-8 rounded-t-lg"
+                      className="p-3 rounded-t-lg "
                       src={product.image}
-                      alt="product image"
+                      alt="product"
                     />
                   </a>
                   <div class="px-5 pb-5">
                     <a href="#">
                       <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                       {product.name}
+                        {product.name}
                       </h5>
                     </a>
 
@@ -135,10 +137,10 @@ const Products = () => {
 
 
   return (
-    <div className="products">
-      <div className="container">
+    <div>
+      <div className="container my-5 py-5 ">
         <div className="row">
-          <div className="col">
+          <div className="col-span-12 mb-5  ">
             <h1 className="flex justify-center mt-20 mb-20  text-2xl text-slate-600 font-bold">
               Latest &nbsp;
               <span className="border-b-4 border-orange-400">Products</span>
@@ -147,8 +149,10 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col">{loading ? <Loading /> : <ShowProducts />}</div>
+        <div className="row justify-items-center ">
+          <div className="col-span-1">
+            {loading ? <Loading /> : <ShowProducts />}
+          </div>
         </div>
       </div>
     </div>
