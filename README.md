@@ -15,4 +15,4 @@ using :
 Tailblocks for design purposes + 
 field data, form validation, and reset functionality is handled by react-hook-form. Once a user submits a valid form, EmailJS is used to send out an email of the completed contact form).
 -Footer(using Tailblocks component in tailwind css for design purposes)
-
+-Home page(products using  Meraki UI tailwind css componenzt for design purposes)
