@@ -8,7 +8,7 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import Test from "./components/Test";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="test" element={<Test />} />
         </Routes>
 
         <Footer />

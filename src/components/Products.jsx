@@ -92,41 +92,49 @@ const Products = () => {
           </div>
         </div>
 
-        <div className=" grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 gap-2">
-          {filter.map((product) => {
-            return (
-              <>
-                <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
+        <div className="px-4 py-16 mx-auto lg:ml-20 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            {filter.map((product) => {
+              return (
+                <>
+                  <div class="overflow-hidden transition-shadow duration-300 bg-slate-900 rounded shadow-sm">
                     <img
-                      className="p-3 rounded-t-lg "
+                      className="object-cover w-full h-1/2"
+                      alt=""
                       src={product.image}
-                      alt="product"
                     />
-                  </a>
-                  <div class="px-5 pb-5">
-                    <a href="#">
-                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                        {product.name}
-                      </h5>
-                    </a>
 
-                    <div class="flex justify-between items-center">
-                      <span class="text-3xl font-bold text-gray-900 dark:text-white">
-                        ${product.price}
-                      </span>
-                      <a
-                        href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        Add to cart
+                    <div class="px-5 pb-5 mt-3 ">
+                      <a href="#">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                          {product.name}
+                        </h5>
                       </a>
+
+                      <div class="flex">
+                        <div className="row grid-cols-3 gap-3">
+                          <div className="float-left ">
+                            <span class="text-3xl font-bold text-gray-900 dark:text-white">
+                              ${product.price}
+                            </span>
+                          </div>
+
+                          <div className="float-right">
+                            <button
+                              href="#"
+                              class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            >
+                              Buy Now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
+                </>
+              );
+            })}
+          </div>
         </div>
       </>
     );
@@ -138,9 +146,9 @@ const Products = () => {
 
   return (
     <div>
-      <div className="container my-5 py-5 ">
+      <div className="container">
         <div className="row">
-          <div className="col-span-12 mb-5  ">
+          <div className="col">
             <h1 className="flex justify-center mt-20 mb-20  text-2xl text-slate-600 font-bold">
               Latest &nbsp;
               <span className="border-b-4 border-orange-400">Products</span>
@@ -149,8 +157,8 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="row justify-items-center ">
-          <div className="col-span-1">
+        <div className="row">
+          <div className="col">
             {loading ? <Loading /> : <ShowProducts />}
           </div>
         </div>
