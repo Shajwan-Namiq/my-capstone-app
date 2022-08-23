@@ -1,6 +1,10 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router 
+} from "react-router-dom";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -8,24 +12,26 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Test from "./components/Test";
+import Product from "./components/Product";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Header />
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="products" element={<Products />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="test" element={<Test />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products/:productid" element={<Product />} />  
+
+          
         </Routes>
 
         <Footer />
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
