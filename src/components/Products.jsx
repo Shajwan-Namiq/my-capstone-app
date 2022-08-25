@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
+
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -36,7 +38,7 @@ const Products = () => {
   const Loading = () => {
     return (
       <>
-        <p className="loading">Loading...</p>
+        <LoadingSpinner />
       </>
     );
   };
@@ -128,7 +130,7 @@ const Products = () => {
                         <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                           ${product.price}
                         </span>
-                        <h5 className="float-left text-sm font-semibold tracking-tight text-orange-400 dark:text-gray-600">
+                        <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-orange-400 dark:text-gray-600">
                           {product.name}
                         </h5>
                       </div>
