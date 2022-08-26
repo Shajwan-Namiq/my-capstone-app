@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
-
+ 
 
 const Products = () => {
   const [data, setData] = useState([]);
