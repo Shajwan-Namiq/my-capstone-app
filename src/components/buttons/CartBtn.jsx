@@ -11,7 +11,8 @@ function CartBtn() {
           className="relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
           href=""
         >
-          <FaShoppingCart size={25} />
+          
+          <FaShoppingCart size={25} /> 
         </button>
       </div>
     </>

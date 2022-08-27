@@ -1,107 +1,90 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Login from "./buttons/Login";
-import Signup from "./buttons/Signup";
-import CartBtn from "./buttons/CartBtn";
-import { useState } from "react";
+ import React from 'react'
+ import Login from './buttons/Login'
+ import Signup from './buttons/Signup'
+import CartBtn from './buttons/CartBtn'
 import MyImage from "./images/Eshoplogo.png";
- import { FaTimes , FaBars} from "react-icons/fa";
+import { Link } from "react-router-dom";
+ import { FaSlash } from "react-icons/fa";
+
+
+ export default function Header() {
+   return (
+     <>
+       <nav className="bg-white border-gray-200 dark:bg-slate-50">
+         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+           <a href="https://flowbite.com" className="flex items-center">
+             <img src={MyImage} className="mr-3 h-6 sm:h-9" alt="Logo" />
+             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+               Flowbite
+             </span>
+           </a>
+
+           <div className="flex items-center gap-2">
+             <a
+               href="tel:5541251234"
+               className="mr-6 font-bold text-sm   text-gray-500 dark:text-gray-900 hover:underline"
+             >
+               (+964) 770-100414
+             </a>
+
+             {/** drop down menue*/}
+
+             <div class="grid grid-cols-2 divide-x divide-slate-900">
+               <div>
+                 <Login />
+               </div>
+               <div>
+                 <Signup />
+               </div>
+             </div>
+
+             <CartBtn />
+           </div>
+         </div>
+       </nav>
+
+       <nav className="bg-gray-100 dark:bg-[#eeeeee9c] ">
+         <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
+           <div className="flex items-center">
+             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+               <li>
+                 <Link
+                   to="/"
+                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                   aria-current="page"
+                 >
+                   Home
+                 </Link>
+               </li>
+               <li>
+                 <Link
+                   to="/products"
+                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                 >
+                   Products
+                 </Link>
+               </li>
+               <li>
+                 <Link
+                   to="/about"
+                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                 >
+                   About
+                 </Link>
+               </li>
+               <li>
+                 <Link
+                   to="/contact"
+                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                 >
+                   Contact
+                 </Link>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+     </>
+   );
+ }
  
-
-
-const Header = () => {
-  const [navbar, setNavbar] = useState(false);
-
-  return (
-    <>
-      <nav className=" w-full shadow">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <div>
-            <div className="mx-auto flex fle-auto items-center justify-between py-3 md:py-5 md:block">
-              <a
-                href="https://endearing-crepe-c9a44e.netlify.app/"
-                className="flex items-center"
-              >
-                <img src={MyImage} className="mr-3 h-6 sm:h-9" alt="Logo" />
-              </a>
-
-              <div className="md:hidden">
-                <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-orange-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <FaTimes
-                      size={20}
-                      className="w-6 h-6 text-orange-400"
-                      strokeWidth={2}
-                    />
-                  ) : (
-                    <FaBars
-                      size={20}
-                      className="w-6 h-6 text-orange-400"
-                      strokeWidth={2}
-                    />
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              className={`flex-1 place-items-center justify-self-center pb-3 mt-5 md:block md:pb-0 md:mt-0 ${
-                navbar ? "block" : "hidden"
-              }`}
-            >
-              <ul className="font-bold items-center justify-center  space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-orange-400 ">
-                  <Link to="/" className=" border-navbar hover:text-[#081927] ">
-                    Home
-                  </Link>
-                </li>
-
-                <li className=" text-orange-400 ">
-                  <Link
-                    to="/products"
-                    className="border-navbar hover:text-[#081927]"
-                  >
-                    Products
-                  </Link>
-                </li>
-                <li className=" text-orange-400  ">
-                  <Link
-                    to="/about"
-                    className="border-navbar hover:text-[#081927] "
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className=" text-orange-400 ">
-                  <Link
-                    to="/contact"
-                    className="border-navbar hover:text-[#081927] "
-                  >
-                    Contact
-                  </Link>
-                </li>
-
-                {/**<!-- Modal toggle --> */}
-                <li>
-                  <Login />
-                </li>
-                <li>
-                  <Signup />
-                </li>
-                <li>
-                  <CartBtn />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </>
-  );
-};
-
-export default Header;

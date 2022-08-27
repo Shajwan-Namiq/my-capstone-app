@@ -13,7 +13,9 @@ import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
- 
+
+
+
 function App() {
   return (
     <>
@@ -26,9 +28,6 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<Product />} />
-        
-
-
         </Routes>
 
         <Footer />

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import LoadingSpinner from "./LoadingSpinner";
@@ -13,9 +11,9 @@ function Product() {
   const [product, setProduct] = useState(null);
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { reviews, name, company, description, price, stars } = product || {};
+  const { name, company, description, price} = product || {};
    
-  console.log(product);
+  
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -48,28 +46,43 @@ function Product() {
 
     return (
       <>
-        <section class="text-gray-400   body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <InnerImageZoom
-                className="lg:w-1/2 w-full lg:h-full h-64 object-cover object-center rounded"
-                src={image?.large?.url}
-                zoomSrc={image?.full?.url}
-                zoomType="hover"
-              />
+        <section className="text-gray-400 m-12 lg:m-20 body-font overflow-hidden">
+          <div className="container mx-auto md:w-5/6   md:px-0 ">
+            <div className="flex flex-wrap ">
+              <div className="w-full md:w-1/2 ">
+                <div>
+                  <InnerImageZoom
+                    src={image?.large?.url}
+                    zoomSrc={image?.full?.url}
+                    zoomType="hover"
+                  />
+                </div>
 
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">
+                <div className="flex flex-wrap gap-3  mt-2">
+                  {product?.images.map((image, index) => (
+                    <img
+                      onClick={() => setImage(image.thumbnails)}
+                      src={image.thumbnails.small.url}
+                      alt={name}
+                      key={index}
+                      className="h-14 w-12 lg:w-20  rounded cursor-pointer"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 className="text-sm title-font text-gray-500 tracking-widest">
                   {company}
                 </h2>
-                <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
+                <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                   {name}
                 </h1>
 
-                <p class="leading-relaxed">{description}</p>
-                <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
-                  <div class="flex">
-                    <span class="mr-3">Color</span>
+                <p className="leading-relaxed">{description}</p>
+                <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
+                  <div className="flex">
+                    <span className="mr-3">Color</span>
                     {product?.colors.map((color) => (
                       <div
                         key={color}
@@ -79,25 +92,14 @@ function Product() {
                     ))}
                   </div>
                 </div>
-                <div class="flex">
-                  <span class="title-font font-medium text-2xl text-slate-900">
+                <div className="flex">
+                  <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                     ${price}
                   </span>
-                  <button class="flex ml-auto text-white bg-orange-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded">
+                  <button className="flex ml-auto text-white bg-orange-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded">
                     Add to cart
                   </button>
                 </div>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {product?.images.map((image, index) => (
-                  <img
-                    onClick={() => setImage(image.thumbnails)}
-                    src={image.thumbnails.small.url}
-                    alt={name}
-                    key={index}
-                    className="w-20 rounded cursor-pointer"
-                  />
-                ))}
               </div>
             </div>
           </div>
