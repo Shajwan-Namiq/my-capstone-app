@@ -122,13 +122,13 @@ function Product() {
                     ${price}
                   </span>
 
-                  <button className="flex ml-10 mr-5 bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded">
+                  <button className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded">
                     Add to Cart
                   </button>
 
                   <Link
                     to="/cart"
-                    className="flex text-slate-900   border-2  py-2 px-6   hover:bg-orange-400 rounded"
+                    className="flex text-slate-900   border-2 border-slate-900  py-2 px-4   hover:bg-orange-400 rounded"
                   >
                     Go to Cart
                   </Link>

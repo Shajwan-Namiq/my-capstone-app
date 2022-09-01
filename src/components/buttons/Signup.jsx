@@ -88,10 +88,10 @@ function Signup() {
               <div className="modal-body relative p-4">
                 <div>
                   <input
+                    autoComplete="on"
                     value={values.username}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    id="username"
                     name="username"
                     type="text"
                     className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
@@ -107,7 +107,7 @@ function Signup() {
                     value={values.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    id="email"
+                    autoComplete="on"
                     name="email"
                     type="text"
                     className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
@@ -119,10 +119,10 @@ function Signup() {
                 </div>
                 <div>
                   <input
+                    autoComplete="on"
                     value={values.password}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    id="password"
                     name="password"
                     type="password"
                     className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
