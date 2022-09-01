@@ -14,8 +14,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
 import Cart from "./components/buttons/Cart";
-import { useFormik } from "formik";
- 
+
 
 
 function App() {

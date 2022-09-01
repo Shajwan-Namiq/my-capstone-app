@@ -85,7 +85,6 @@ function Login() {
 
               <div className="modal-body relative p-4">
                 <div>
-                  
                   <input
                     value={values.email}
                     onChange={handleChange}
@@ -95,14 +94,12 @@ function Login() {
                     type="text"
                     className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
                     placeholder="Email address"
-                    
                   />
                   {touched.email && errors.email ? (
-                    <div>{errors.email}</div>
+                    <div className="text-red-600">{errors.email}</div>
                   ) : null}
                 </div>
                 <div>
-                  
                   <input
                     value={values.password}
                     onChange={handleChange}
@@ -114,7 +111,7 @@ function Login() {
                     placeholder="Enter your Password"
                   />
                   {touched.password && errors.password ? (
-                    <div>{errors.password}</div>
+                    <div className="text-red-600">{errors.password}</div>
                   ) : null}
                 </div>
               </div>
