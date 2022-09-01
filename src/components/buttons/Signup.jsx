@@ -16,13 +16,13 @@ function Signup() {
           .max(30, "username must be shorter than 30 characters")
           .required("Required Username"),
         email: Yup.string()
-          .max(30, "Login must be shorter than 30 characters")
-          .required("Required Email address"),
+          .email("Invalid email")
+          .required("Required Email Address"),
         password: Yup.string()
           .min(6, "Password should be longer than 6 characters")
           .required("Required password"),
       }),
-      onSubmit: ({username , email, password }, { resetForm }) => {
+      onSubmit: ({ username, email, password }, { resetForm }) => {
         alert(`username: ${username},email: ${email}, password: ${password}`);
         resetForm();
       },

@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function 
-() {
+export default function() {
   return (
     <>
       <div class="flex justify-center my-10">
@@ -25,13 +24,13 @@ export default function
               <tbody>
                 <tr>
                   <td class=" pb-4 md:table-cell">
-                    <p>
+                    
                       <img
                         src="https://limg.app/i/Calm-Cormorant-Catholic-Pinball-Blaster-yM4oub.jpeg"
                         class="w-20 rounded"
                         alt="Thumbnail"
                       />
-                    </p>
+                     
                   </td>
                   <td>
                     <p>

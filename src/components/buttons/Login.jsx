@@ -13,9 +13,7 @@ function Login() {
          password: "",
        },
        validationSchema: Yup.object({
-         email: Yup.string()
-           .max(30, "Login must be shorter than 30 characters")
-           .required("Required Email address"),
+         email: Yup.string().email("Invalid email").required("Required Email Address"),
          password: Yup.string()
            .min(6, "Password should be longer than 6 characters")
            .required("Required password"),
