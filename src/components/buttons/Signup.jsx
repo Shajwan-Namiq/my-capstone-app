@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
- 
+
 
 function Signup() {
   return (
@@ -13,7 +13,6 @@ function Signup() {
           data-bs-target="#SignupModal"
         >
           <FaUserPlus size={22} className="ml-2" />
-            
         </button>
       </div>
 
@@ -44,78 +43,59 @@ function Signup() {
             <div className="border-b flex flex-shrink-0 flex-wrap items-center  p-4 border-t border-gray-200 rounded-b-md">
               <button
                 type="button"
-                className="flex flex-row justify-center w-full px-6 py-2.5 bg-[#2a6f97] text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
+                className="flex flex-row justify-center w-full px-6 py-2.5 border-2 border-red-900  text-red-900 hover:text-slate-900 font-semibold text-xs leading-tight rounded shadow-md hover:border-gray-900 hover:shadow-lg focus:bg-slate-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-300 active:shadow-lg transition duration-150 ease-in-out "
               >
                 <FaGoogle />
-                <span className="px-3"> Sign up With Google</span>
+                <span className="px-3"> Sign in With Google</span>
               </button>
 
               <button
                 type="button"
-                className="mt-4 flex flex-row justify-center w-full px-6 py-2.5 bg-[#2a6f97] text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
+                className="mt-4 flex flex-row justify-center w-full px-6 py-2.5 border-2 border-blue-900  text-blue-900 hover:text-slate-900 font-semibold text-xs leading-tight rounded shadow-md hover:border-gray-900 hover:shadow-lg focus:bg-slate-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-300 active:shadow-lg transition duration-150 ease-in-out "
               >
                 <FaFacebook />
-                <span className="px-3"> Sign up With Facebook</span>
+                <span className="px-3"> Sign in With Facebook</span>
               </button>
             </div>
 
             <div className="modal-body relative p-4">
               <div>
-                <label
-                  htmlFor="exampleInput"
-                  className="block mb-2 text-sm font-medium text-black dark:text-black"
-                >
-                  UserName
-                </label>
                 <input
                   type="text"
                   name="exampleInput"
                   id="exampleInput"
                   className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
-                  placeholder="UserName"
+                  placeholder="Enter UserName"
                   required
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="my-2 block mb-2 text-sm font-medium text-black dark:text-black"
-                >
-                  Email address
-                </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
-                  placeholder="shajwan@company.com"
+                  className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
+                  placeholder="Enter Email Address"
                   required
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="password"
-                  className="block my-2 text-sm font-medium text-black dark:text-black"
-                >
-                  Password
-                </label>
                 <input
                   type="password"
-                  name="password"
-                  id="password"
-                  placeholder="*****"
-                  className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
+                  id="confirm_password"
+                  className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
+                  placeholder="Enter password"
                   required
-                />
+                ></input>
               </div>
             </div>
 
             <div className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4    rounded-b-md">
               <button
-                type="button"
-                className="mt-5 w-full px-6 py-2.5 bg-[#2a6f97] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
+                type="submit"
+                className="mt-5 w-full px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg transition duration-150 ease-in-out "
               >
                 Register
               </button>

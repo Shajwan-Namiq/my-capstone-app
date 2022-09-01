@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import LoadingSpinner from "./LoadingSpinner";
+import { Link } from "react-router-dom";
  
 
 
@@ -11,9 +12,18 @@ function Product() {
   const [product, setProduct] = useState(null);
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { name, company, description, price} = product || {};
+  const { name, company, description, price } = product || {};
    
-  
+
+
+ 
+
+
+
+
+
+
+
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -24,14 +34,24 @@ function Product() {
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
         setProduct(response);
-    })();
+    }
+    )();
   }, [id]);
+
+ 
+ 
+
+
 
   useEffect(() => {
     if (product) {
       setImage(product?.images[0]?.thumbnails);
     }
   }, [product]);
+
+
+
+
 
   const Loading = () => {
     return (
@@ -41,9 +61,10 @@ function Product() {
     );
   };
 
-  const ShowProduct = () => {
-    //for converting hex code to color
+ 
 
+  const ShowProduct = () => {
+   
     return (
       <>
         <section className="text-gray-400 m-12 lg:m-20 body-font overflow-hidden">
@@ -83,12 +104,16 @@ function Product() {
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
                   <div className="flex">
                     <span className="mr-3">Color</span>
+
                     {product?.colors.map((color) => (
-                      <div
+                      <button
+                        
                         key={color}
                         className="border-white mr-2 border-2 rounded-full h-6 w-6 flex items-center justify-center"
                         style={{ backgroundColor: color }}
-                      ></div>
+                      >
+                       
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -96,9 +121,17 @@ function Product() {
                   <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                     ${price}
                   </span>
-                  <button className="flex ml-auto text-white bg-orange-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded">
-                    Add to cart
+
+                  <button className="flex ml-10 mr-5 bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded">
+                    Add to Cart
                   </button>
+
+                  <Link
+                    to="/cart"
+                    className="flex text-slate-900   border-2  py-2 px-6   hover:bg-orange-400 rounded"
+                  >
+                    Go to Cart
+                  </Link>
                 </div>
               </div>
             </div>

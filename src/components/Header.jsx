@@ -1,13 +1,14 @@
  import React from 'react'
  import Login from './buttons/Login'
  import Signup from './buttons/Signup'
-import CartBtn from './buttons/CartBtn'
 import MyImage from "./images/Eshoplogo.png";
 import { Link } from "react-router-dom";
- import { FaSlash } from "react-icons/fa";
-
+import { FaShoppingCart } from "react-icons/fa";
+ 
 
  export default function Header() {
+ 
+ 
    return (
      <>
        <nav className="bg-white border-gray-200 dark:bg-slate-50">
@@ -29,7 +30,7 @@ import { Link } from "react-router-dom";
 
              {/** drop down menue*/}
 
-             <div class="grid grid-cols-2 divide-x divide-slate-900">
+             <div className="grid grid-cols-2 divide-x divide-slate-900">
                <div>
                  <Login />
                </div>
@@ -38,7 +39,16 @@ import { Link } from "react-router-dom";
                </div>
              </div>
 
-             <CartBtn />
+             <div className="flex justify-center md:block">
+               <Link
+                 type="button"
+                 className="relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
+                 to="/cart"
+               >
+                 <FaShoppingCart size={25} />
+                 Cart 
+               </Link>
+             </div>
            </div>
          </div>
        </nav>
