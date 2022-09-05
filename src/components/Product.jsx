@@ -4,13 +4,14 @@ import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
- 
+
 
 
 function Product() {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
   const [image, setImage] = useState(null);
+  const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
   const { name, company, description, price } = product || {};
    
@@ -39,17 +40,23 @@ function Product() {
   }, [id]);
 
  
- 
+    
 
 
 
   useEffect(() => {
-    if (product) {
+    if(product) {
       setImage(product?.images[0]?.thumbnails);
-    }
+    } 
   }, [product]);
 
 
+
+ useEffect(() => {
+   if (product) {
+     Setcolorschange(product?.colors);
+   }
+ }, [product]);
 
 
 
@@ -71,13 +78,11 @@ function Product() {
           <div className="container mx-auto md:w-5/6   md:px-0 ">
             <div className="flex flex-wrap ">
               <div className="w-full md:w-1/2 ">
-                <div>
-                  <InnerImageZoom
-                    src={image?.large?.url}
-                    zoomSrc={image?.full?.url}
-                    zoomType="hover"
-                  />
-                </div>
+                <InnerImageZoom
+                  src={image?.large?.url}
+                  zoomSrc={image?.full?.url}
+                  zoomType="hover"
+                />
 
                 <div className="flex flex-wrap gap-3  mt-2">
                   {product?.images.map((image, index) => (
@@ -107,16 +112,27 @@ function Product() {
 
                     {product?.colors.map((color) => (
                       <button
-                        
+                        onClick={() => Setcolorschange(color)}
                         key={color}
-                        className="border-white mr-2 border-2 rounded-full h-6 w-6 flex items-center justify-center"
+                        className="hover:border-gray-500 hover:border-4 border-white mr-2 border-2 rounded-full h-6 w-6 flex items-center justify-center"
                         style={{ backgroundColor: color }}
-                      >
-                       
-                      </button>
+                      ></button>
                     ))}
                   </div>
+
+
+                  <div>
+                    
+                      <div
+                        style={{ backgroundColor: colorschange }}
+                        alt={name}
+                        className="h-10 w-20 rounded cursor-pointer"
+                      />
+            
+                  </div>
+
                 </div>
+
                 <div className="flex">
                   <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                     ${price}

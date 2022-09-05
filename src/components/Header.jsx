@@ -15,7 +15,6 @@ import { FaShoppingCart } from "react-icons/fa";
          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
            <a href="https://flowbite.com" className="flex items-center">
              <img src={MyImage} className="mr-3 h-6 sm:h-9" alt="Logo" />
-              
            </a>
 
            <div className="flex items-center gap-2">
@@ -57,7 +56,7 @@ import { FaShoppingCart } from "react-icons/fa";
                <li>
                  <Link
                    to="/"
-                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                   className="text-gray-900 dark:text-gray-900   font-bold  hover:border-y-2 border-orange-400  hover:text-gray-700"
                    aria-current="page"
                  >
                    Home
@@ -66,7 +65,7 @@ import { FaShoppingCart } from "react-icons/fa";
                <li>
                  <Link
                    to="/products"
-                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                   className="text-gray-900 dark:text-gray-900   font-bold  hover:border-y-2 border-orange-400  hover:text-gray-700"
                  >
                    Products
                  </Link>
@@ -74,7 +73,7 @@ import { FaShoppingCart } from "react-icons/fa";
                <li>
                  <Link
                    to="/about"
-                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                   className="text-gray-900 dark:text-gray-900   font-bold  hover:border-y-2 border-orange-400  hover:text-gray-700"
                  >
                    About
                  </Link>
@@ -82,7 +81,7 @@ import { FaShoppingCart } from "react-icons/fa";
                <li>
                  <Link
                    to="/contact"
-                   className="text-gray-900 dark:text-gray-900   font-bold hover:underline underline-offset-8 decoration-orange-400 hover:decoration-4 hover:text-gray-800"
+                   className="text-gray-900 dark:text-gray-900   font-bold  hover:border-y-2 border-orange-400  hover:text-gray-700"
                  >
                    Contact
                  </Link>

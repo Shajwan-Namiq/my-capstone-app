@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState } from 'react';
 import sofa from "./images/sofa3.jpg"; 
- 
 
-export default function About() {
+export default function About(){
+ 
   return (
     <>
       <section className=" flex flex-col justify-center antialiased min-h-screen">
@@ -42,18 +43,9 @@ export default function About() {
                 </h3>
               </header>
               <p className="text-lg text-gray-600 flex-grow">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                deleniti, veniam tenetur quia sed molestiae temporibus at nisi,
-                quod facere nulla vero rem id laboriosam delectus iure possimus
-                animi! Reiciendis! Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Illum quae iure aperiam iusto quas cumque
-                mollitia dolor, alias non ab in facilis, aliquid amet libero
-                recusandae voluptatem ad nostrum rerum. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Incidunt soluta accusantium
-                ut quibusdam, suscipit molestiae hic nihil corporis deleniti
-                quia quidem voluptatum error dignissimos a qui nisi cum quisquam
-                architecto! Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas possimus necessitatibus cumque doloribus deserunt et, voluptates, nisi aut deleniti sit eaque quia explicabo vero hic atque aspernatur iste nihil placeat!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat sed officiis expedita veniam! Tenetur blanditiis illo repellendus aliquam provident cum, nihil non, assumenda officia ullam neque in ab. Id, quod!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore rerum aperiam tempore facilis veniam explicabo dolorem delectus eaque est beatae. Ea, voluptates error fugiat in maiores consectetur culpa illum? Veniam.
               </p>
 
               <footer className="flex items-center mt-4">
