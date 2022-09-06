@@ -3,6 +3,7 @@ import React from 'react'
 import Products from './Products';
 import Blogs from "./Blogs";
 import Section from './Section';
+import Subscribe from './Subscribe';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Section />
       <Blogs />
       <Products />
+      <Subscribe />
     </>
   );
 }
