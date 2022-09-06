@@ -4,21 +4,21 @@ import Third from "../images/f2.jpg";
 
 const sliderImage = [
   {
-    title: "First Slide",
-    description: "This is the first slider Image of our carousel",
+    title: "Bed Room",
+    description: "Starting From 3000 $",
     urls: First,
   },
   {
-    title: "Second Slide",
-    description: "This is the second slider Image of our carousel",
+    title: "Living Room",
+    description: "Starting From 2000 $",
     urls: Second,
   },
   {
-    title: "Third Slide",
-    description: "This is the Third slider Image of our carousel",
+    title: "Armchair",
+    description: "Starting From 5000 $",
     urls: Third,
   },
-]
+];
 
  
  export default sliderImage ;
