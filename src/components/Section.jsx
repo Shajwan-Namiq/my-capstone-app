@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function Section() {
   return (
     <div>
-      <section className="text-gray-400 bg-[#e5e5e557] body-font">
+      <section className=" text-gray-400 bg-[#e5e5e557] body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+          <div className="mt-10 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
             <img
               className="object-cover object-center rounded"
               alt="hero"
@@ -17,20 +17,19 @@ export default function Section() {
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-slate-900">
               Read this section
               <br className="hidden lg:inline-block" />
-             Before Buy anything
+              Before Buy anything
             </h1>
             <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptate iusto ut modi veniam vel, maxime consequuntur cupiditate rerum! Voluptate eos, similique excepturi assumenda sapiente impedit inventore consectetur quae rem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque distinctio, enim a perspiciatis beatae id facilis? Laudantium maiores error minima, officiis voluptatem voluptas cum? Accusamus possimus architecto quaerat accusantium laboriosam?Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+              Lorem.
             </p>
             <div className="flex justify-center">
               <Link
                 to="./Products"
                 className="inline-flex text-white bg-orange-400 border-0 py-2 px-6 focus:outline-none hover:bg-slate-900 rounded text-lg"
               >
-                Shoping Now 
+                Shopping Now
               </Link>
             </div>
           </div>
