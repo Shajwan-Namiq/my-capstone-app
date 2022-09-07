@@ -22,31 +22,31 @@ export default function Features() {
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#e5e5e5] sm:w-24 sm:h-24">
               <GiOfficeChair size={35} />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Office</h6>
+            <h6 className="mb-2 font-semibold leading-5 text-slate-900">Office</h6>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#e5e5e5] sm:w-24 sm:h-24">
               <IoIosBed size={35} />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Bedroom</h6>
+            <h6 className="mb-2 font-semibold leading-5 text-slate-900">Bedroom</h6>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#e5e5e5] sm:w-24 sm:h-24">
               <GiSofa size={35} />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Living Room</h6>
+            <h6 className="mb-2 font-semibold leading-5 text-slate-900">Living Room</h6>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#e5e5e5] sm:w-24 sm:h-24">
               <BiChair size={35} />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Dining Room</h6>
+            <h6 className="mb-2 font-semibold leading-5 text-slate-900">Dining</h6>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#e5e5e5] sm:w-24 sm:h-24">
               <MdCountertops size={35} />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Kitchen</h6>
+            <h6 className="mb-2 font-semibold leading-5 text-slate-900">Kitchen</h6>
           </div>
         </div>
       </div>

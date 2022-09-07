@@ -17,4 +17,5 @@ field data, form validation, and reset functionality is handled by react-hook-fo
 -Footer(using Tailblocks component in tailwind css for design purposes)
 -Home page(products using  Meraki UI tailwind css componenzt for design purposes)
 -Login and registration using formik
+-using formik for subscribe functionality
 
