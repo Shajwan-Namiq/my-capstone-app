@@ -191,10 +191,20 @@ function Product() {
     );
   };
 
+
+
+
+
+
+
+
+
   return (
-    <div className="row">
-      <div className="col">{loading ? <Loading /> : <ShowProduct />}</div>
-    </div>
+    <>
+      <div className="row">
+        <div className="col">{loading ? <Loading /> : <ShowProduct />}</div>
+      </div>
+    </>
   );
 }
 
