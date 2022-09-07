@@ -1,9 +1,16 @@
 import React from 'react'
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
+
 
 export default function Subscribe() {
   
+  const [dicount, Setdiscount] = useState(
+    " Join us from anywhere and get the 25% off"
+  );
+
+
    const { handleSubmit, handleChange, values, touched, errors, handleBlur } =
      useFormik({
        initialValues: {
@@ -27,7 +34,7 @@ export default function Subscribe() {
           <section className="bg-white dark:bg-gray-900">
             <div className="container px-8 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
               <h2 className="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
-                Join us and get the update from anywhere
+               {dicount}
               </h2>
 
               <div className="mt-8 lg:mt-0">
@@ -52,10 +59,7 @@ export default function Subscribe() {
                     <div className="text-red-600">{errors.email}</div>
                   ) : null}
                 </p>
-                <p className="mt-3 text-sm text-gray-500 dark:text-gray-300">
-                  Attention! Offer expires in 30 days. Make sure not to miss
-                  this opportunity
-                </p>
+                
               </div>
             </div>
           </section>

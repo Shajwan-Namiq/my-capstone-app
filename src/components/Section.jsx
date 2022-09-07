@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 export default function Section() {
+
+
   return (
     <div>
       <section className=" text-gray-400 bg-[#e5e5e557] body-font">
