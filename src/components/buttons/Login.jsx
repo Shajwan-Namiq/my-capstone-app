@@ -1,29 +1,10 @@
 import React from "react";
 import { FaFacebook, FaGoogle, FaUser } from "react-icons/fa";
-import { useFormik } from "formik";
- import * as Yup from "yup";
-
+ 
 
 function Login() {
 
-   const { handleSubmit, handleChange, values, touched, errors, handleBlur } =
-     useFormik({
-       initialValues: {
-         email: "",
-         password: "",
-       },
-       validationSchema: Yup.object({
-         email: Yup.string().email("Invalid email").required("Required Email Address"),
-         password: Yup.string()
-           .min(6, "Password should be longer than 6 characters")
-           .required("Required password"),
-       }),
-       onSubmit: ({ email, password }, { resetForm }) => {
-         alert(`email: ${email}, password: ${password}`);
-         resetForm();
-       },
-     });
-
+  
   return (
     <>
       <div className="flex flex-shrink-0 flex-wrap">
@@ -38,7 +19,7 @@ function Login() {
         </button>
       </div>
 
-      <form onSubmit={handleSubmit}>
+    
         <div
           className="modal fade fixed top-14 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
           id="loginModal"
@@ -84,33 +65,23 @@ function Login() {
               <div className="modal-body relative p-4">
                 <div>
                   <input
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    autoComplete="on"
+                    
                     name="email"
                     type="text"
                     className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
                     placeholder="Email address"
                   />
-                  {touched.email && errors.email ? (
-                    <div className="text-red-600">{errors.email}</div>
-                  ) : null}
+                 
                 </div>
                 <div>
                   <input
-                    autoComplete="on"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                   
                     name="password"
                     type="password"
                     className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
                     placeholder="Enter your Password"
                   />
-                  {touched.password && errors.password ? (
-                    <div className="text-red-600">{errors.password}</div>
-                  ) : null}
+                 
                 </div>
               </div>
 
@@ -125,7 +96,7 @@ function Login() {
             </div>
           </div>
         </div>
-      </form>
+       
     </>
   );
 }

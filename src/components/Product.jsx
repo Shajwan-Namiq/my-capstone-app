@@ -114,11 +114,14 @@ function Product() {
 
             <div className="flex flex-wrap  ">
               <div className="w-full md:w-1/2 mt-6">
-                <InnerImageZoom
-                  src={image?.large?.url}
-                  zoomSrc={image?.full?.url}
-                  zoomType="hover"
-                />
+                {image && (
+                  <InnerImageZoom
+                    src={image.large.url}
+                    zoomSrc={image.full.url}
+                    zoomType="hover"
+                  />
+                )}
+                
 
                 <div className="flex flex-wrap gap-3  mt-2">
                   {product?.images.map((image, index) => (
