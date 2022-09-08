@@ -1,14 +1,11 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
+ 
 import { ToastContainer, toast } from "react-toastify";
 
 export default function Subscribe() {
-  const [dicount, Setdiscount] = useState(
-    " Join us from anywhere and get the 25% off"
-  );
-
+ 
   const { handleSubmit, handleChange, values, touched, errors, handleBlur } =
     useFormik({
       initialValues: {
@@ -44,7 +41,8 @@ export default function Subscribe() {
       <section className="bg-white dark:bg-gray-900">
         <div className="container px-8 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
-            {dicount}
+            Join us from anywhere and get the 25% off
+           
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mt-8 lg:mt-0">
