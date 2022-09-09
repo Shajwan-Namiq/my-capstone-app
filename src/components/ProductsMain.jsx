@@ -41,14 +41,60 @@ const Products = () => {
     );
   };
 
-  
+   const filterProduct = (cat) => {
+     const updatedList = data.filter((x) => x.category === cat);
+     setFilter(updatedList);
+   };
 
   const ShowProducts = () => {
     return (
       <>
+        <div className=" grid justify-items-center ">
+          <div className="my-10 grid grid-cols-6 grid-flow-row text-center border-b border-gray-200 text-gray-500">
+            <button
+              onClick={() => setFilter(data)}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              All
+            </button>
+
+            <button
+              onClick={() => filterProduct("office")}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              Office
+            </button>
+            <button
+              onClick={() => filterProduct("living room")}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              Living room
+            </button>
+
+            <button
+              onClick={() => filterProduct("kitchen")}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              Kitchen
+            </button>
+
+            <button
+              onClick={() => filterProduct("bedroom")}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              Bedroom
+            </button>
+            <button
+              onClick={() => filterProduct("dining")}
+              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+            >
+              Dining
+            </button>
+          </div>
+        </div>
+
         <div className="px-4 py-2 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        
             {filter.slice(0, 8).map((product) => {
               return (
                 <div
@@ -101,20 +147,17 @@ const Products = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col">
+      
           <h1 className="flex justify-center mt-20 mb-2  text-2xl text-slate-600 font-bold">
             Latest &nbsp;
             <span className="border-b-4 border-orange-400">Products</span>
             &nbsp; Furniture
           </h1>
-      
-        </div>
-      </div>
+       
 
-      <div className="row">
-        <div className="col">{loading ? <Loading /> : <ShowProducts />}</div>
-      </div>
+       
+       {loading ? <Loading /> : <ShowProducts />} 
+       
     </>
   );
 };
