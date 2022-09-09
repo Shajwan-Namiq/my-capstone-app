@@ -10,9 +10,9 @@ export default function Header() {
     <>
       <nav className="bg-white border-gray-200 dark:bg-slate-50">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-          <a href="https://flowbite.com" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={MyImage} className="mr-3 h-6 sm:h-9" alt="Logo" />
-          </a>
+          </Link>
 
           <div className="flex items-center gap-2">
             <a
@@ -24,13 +24,15 @@ export default function Header() {
 
             {/** drop down menue*/}
 
-            <div className="grid grid-cols-2 divide-x divide-slate-900">
+            <div className="grid grid-cols-1 divide-x divide-slate-900">
               <div>
                 <Login />
               </div>
-              <div>
+            
+              {/**<div>
                 <Signup />
-              </div>
+              </div>*/}
+              
             </div>
 
             <div>

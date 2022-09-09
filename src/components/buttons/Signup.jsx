@@ -2,8 +2,11 @@ import React from "react";
 import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
 
 function Signup() {
+const [si,setsi] = useState("signup");
+
   const { handleSubmit, handleChange, values, touched, errors, handleBlur } =
     useFormik({
       initialValues: {
@@ -24,7 +27,9 @@ function Signup() {
       }),
       onSubmit: ({ username, email, password }, { resetForm }) => {
         alert(`username: ${username},email: ${email}, password: ${password}`);
+     setsi(`username: ${username}`);
         resetForm();
+        
       },
     });
 
@@ -39,6 +44,7 @@ function Signup() {
           data-bs-target="#SignupModal"
         >
           <FaUserPlus size={22} className="ml-2" />
+          {si}
         </button>
       </div>
 

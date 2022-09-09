@@ -1,10 +1,44 @@
 import React from "react";
-import { FaFacebook, FaGoogle, FaUser } from "react-icons/fa";
- 
+import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useState } from "react";
 
-function Login() {
+function Signup() {
+  const [login, setlogin] = useState("Login");
 
-  
+  const { handleSubmit, handleChange, values, touched, errors, handleBlur } =
+    useFormik({
+      initialValues: {
+        username: "",
+        email: "",
+        password: "",
+      },
+      validationSchema: Yup.object({
+        username: Yup.string()
+          .max(30, "username must be shorter than 30 characters")
+          .required("Required Username"),
+        email: Yup.string()
+          .email("Invalid email")
+          .required("Required Email Address"),
+        password: Yup.string()
+          .min(6, "Password should be longer than 6 characters")
+          .required("Required password"),
+      }),
+      onSubmit: ({ username, email, password }, { resetForm }) => {
+        alert(`username: ${username},email: ${email}, password: ${password}`);
+        resetForm();
+
+     
+   if (login) {
+     setlogin(`Welcome ${username}`);
+   }
+
+
+
+      },
+    });
+
   return (
     <>
       <div className="flex flex-shrink-0 flex-wrap">
@@ -12,17 +46,17 @@ function Login() {
           type="button"
           className="flex hover:text-slate-900 text-orange-400 "
           data-bs-toggle="modal"
-          data-bs-target="#loginModal"
+          data-bs-target="#SignupModal"
         >
-          Sign in
-          <FaUser size={20} className="mx-1" />
+          <FaUserPlus size={22} className="ml-2" />
+          <span className="mx-2">{login}</span>
         </button>
       </div>
 
-    
+      <form onSubmit={handleSubmit}>
         <div
           className="modal fade fixed top-14 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
-          id="loginModal"
+          id="SignupModal"
           tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -65,23 +99,49 @@ function Login() {
               <div className="modal-body relative p-4">
                 <div>
                   <input
-                    
+                    autoComplete="on"
+                    value={values.username}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="username"
+                    type="text"
+                    className=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
+                    placeholder="Enter UserName"
+                  />
+                  {touched.username && errors.username ? (
+                    <div className="text-red-600">{errors.username}</div>
+                  ) : null}
+                </div>
+
+                <div>
+                  <input
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    autoComplete="on"
                     name="email"
                     type="text"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
-                    placeholder="Email address"
+                    className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500   dark:text-black"
+                    placeholder="Enter Email address"
                   />
-                 
+                  {touched.email && errors.email ? (
+                    <div className="text-red-600">{errors.email}</div>
+                  ) : null}
                 </div>
                 <div>
                   <input
-                   
+                    autoComplete="on"
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     name="password"
                     type="password"
                     className="mt-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-500  dark:text-black"
                     placeholder="Enter your Password"
                   />
-                 
+                  {touched.password && errors.password ? (
+                    <div className="text-red-600">{errors.password}</div>
+                  ) : null}
                 </div>
               </div>
 
@@ -96,9 +156,9 @@ function Login() {
             </div>
           </div>
         </div>
-       
+      </form>
     </>
   );
 }
 
-export default Login;
+export default Signup;

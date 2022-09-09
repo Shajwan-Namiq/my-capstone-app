@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.2",
     "@coreui/react": "^4.3.1",
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -32,6 +33,7 @@
     "react-icons": "^4.4.0",
     "react-img-zoom": "^0.1.0",
     "react-inner-image-zoom": "^3.0.2",
+    "react-json-pretty": "^2.2.0",
     "react-loader-spinner": "^5.1.7-beta.1",
     "react-loading-skeleton": "^3.1.0",
     "react-medium-image-zoom": "^5.0.2",
