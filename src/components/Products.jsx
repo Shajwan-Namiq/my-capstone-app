@@ -5,18 +5,14 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 
-
-
 export default function Products() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-   
+
   const [q, setQ] = useState("");
   const [searchParam] = useState(["company", "name", "id"]);
   const [filterParam, setFilterParam] = useState(["All"]);
-
-
 
   useEffect(() => {
     fetch("https://course-api.com/react-store-products")
@@ -37,13 +33,13 @@ export default function Products() {
 
   function search(items) {
     return items.filter((item) => {
-      if (item.company == filterParam) {
+      if (item.company === filterParam) {
         return searchParam.some((newItem) => {
           return (
             item[newItem].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
           );
         });
-      } else if (filterParam == "All") {
+      } else if (filterParam === "All") {
         return searchParam.some((newItem) => {
           return (
             item[newItem].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
@@ -53,30 +49,25 @@ export default function Products() {
     });
   }
 
-
-  
-   
-
-
-
-
   if (error) {
     return (
       <>
         <p>{error.message}</p>
-           
       </>
     );
   } else if (!isLoaded) {
-   return (
-     <>
-       <LoadingSpinner />
-     </>
-   );
+    return (
+      <>
+        <LoadingSpinner />
+      </>
+    );
   } else {
     return (
       <>
-        <nav className="flex pl-64 mt-10 text-slate-900" aria-label="Breadcrumb">
+        <nav
+          className="flex pl-64 mt-10 text-slate-900"
+          aria-label="Breadcrumb"
+        >
           <ol className="inline-flex items-center space-x-1 md:space-x-3">
             <li className="inline-flex items-center">
               <svg
@@ -114,23 +105,22 @@ export default function Products() {
                 </span>
               </div>
             </li>
-            
           </ol>
         </nav>
 
         <div className="mt-5 mb-20">
           <div className="grid grid-flow-row-dense grid-cols-12 grid-rows-1">
             <div className="col-span-12 lg:col-span-2  mx-2 mt-20">
-              <div class="relative text-gray-600 focus-within:text-gray-400">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <div className="relative text-gray-600 focus-within:text-gray-400">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
-                    class="w-6 h-6"
+                    className="w-6 h-6"
                   >
                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
@@ -140,7 +130,7 @@ export default function Products() {
                   name="search-form"
                   id="search-form"
                   className="search-input w-full  p-4  text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-slate-900 focus:bg-white focus:text-gray-900"
-                  autocomplete="off"
+                  autoComplete="off"
                   placeholder="Search by name "
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
