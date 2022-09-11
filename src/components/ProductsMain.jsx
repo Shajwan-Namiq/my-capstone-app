@@ -4,8 +4,10 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
-
+ 
 const Products = () => {
+
+  
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
@@ -49,49 +51,44 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-       
-        <div className="  grid justify-items-center ">
-          <div className="my-10 grid grid-cols-6 grid-flow-row text-center border-b  text-gray-500">
+        <div className="mt-10 bg-[#e5e5e55f] grid justify-items-center ">
+          <div className="mt-5 mb-5 grid grid-cols-6 grid-flow-row text-center   text-slate-900">
             <button
               onClick={() => setFilter(data)}
-              className="  flex justify-center  hover:text-gray-800 py-4"
+              className="uppercase  flex justify-center border-x-2 hover:text-orange-400 text-xs  lg:text-lg  px-2  py-2"
             >
               All
             </button>
 
             <button
               onClick={() => filterProduct("office")}
-              className=" flex justify-center    hover:text-gray-800  py-4"
+              className="uppercase flex justify-center  border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
             >
               Office
             </button>
             <button
-            
               onClick={() => filterProduct("living room")}
-              className=" flex justify-center   hover:text-gray-800  py-4"
+              className="uppercase flex justify-center border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
             >
               Living room
             </button>
 
             <button
-            
               onClick={() => filterProduct("kitchen")}
-              className=" flex justify-center   hover:text-gray-800  py-4"
+              className="uppercase flex justify-center border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
             >
               Kitchen
             </button>
 
             <button
-            
               onClick={() => filterProduct("bedroom")}
-              className=" flex justify-center  py-4"
+              className="uppercase flex justify-center border-x-2 hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
             >
               Bedroom
             </button>
             <button
-            
               onClick={() => filterProduct("dining")}
-              className=" flex justify-center    hover:text-gray-800  py-4"
+              className="uppercase flex justify-center  border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
             >
               Dining
             </button>

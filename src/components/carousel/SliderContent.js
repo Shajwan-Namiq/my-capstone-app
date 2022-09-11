@@ -12,9 +12,9 @@ function SliderContent({ activeIndex, sliderImage }) {
           <img className="slide-image rounded-sm " src={slide.urls} alt="" />
 
 
-          <div className="mt-32 ">
+          <div className="mt-32">
             <div className="row flex px-20 ">
-              <p className="px-2 bg-[#edede968] slide-title text-4xl lg:text-6xl font-normal tracking-tight text-gray-900 dark:text-slate-900">
+              <p className="px-2 py-2 bg-[#edede968] slide-title text-4xl lg:text-6xl font-normal tracking-tight text-gray-900 dark:text-slate-900">
                 {slide.title}
               </p>
             </div>
