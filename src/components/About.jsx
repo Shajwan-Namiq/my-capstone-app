@@ -5,6 +5,8 @@ export default function About(){
  
   return (
     <>
+
+    
       <section className=" flex flex-col justify-center antialiased min-h-screen">
         <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
           <article className="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">

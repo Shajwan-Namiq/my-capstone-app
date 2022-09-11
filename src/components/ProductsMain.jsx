@@ -49,44 +49,49 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-        <div className=" grid justify-items-center ">
-          <div className="my-10 grid grid-cols-6 grid-flow-row text-center border-b border-gray-200 text-gray-500">
+       
+        <div className="  grid justify-items-center ">
+          <div className="my-10 grid grid-cols-6 grid-flow-row text-center border-b  text-gray-500">
             <button
               onClick={() => setFilter(data)}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className="  flex justify-center  hover:text-gray-800 py-4"
             >
               All
             </button>
 
             <button
               onClick={() => filterProduct("office")}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className=" flex justify-center    hover:text-gray-800  py-4"
             >
               Office
             </button>
             <button
+            
               onClick={() => filterProduct("living room")}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className=" flex justify-center   hover:text-gray-800  py-4"
             >
               Living room
             </button>
 
             <button
+            
               onClick={() => filterProduct("kitchen")}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className=" flex justify-center   hover:text-gray-800  py-4"
             >
               Kitchen
             </button>
 
             <button
+            
               onClick={() => filterProduct("bedroom")}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className=" flex justify-center  py-4"
             >
               Bedroom
             </button>
             <button
+            
               onClick={() => filterProduct("dining")}
-              className="flex justify-center border-b-4 border-transparent hover:text-gray-800 hover:border-orange-400 py-4"
+              className=" flex justify-center    hover:text-gray-800  py-4"
             >
               Dining
             </button>

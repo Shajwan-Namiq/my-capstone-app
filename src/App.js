@@ -12,6 +12,7 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Test from "./components/Test";
 import Product from "./components/Product";
 import Cart from "./components/buttons/Cart";
  import { useEffect } from "react";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
 
         <Footer />

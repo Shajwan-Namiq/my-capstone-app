@@ -1,12 +1,12 @@
- .textfooter {
-     font-family: cursive;
- }
- 
- .textInput {
-     margin: "30px";
-     width: "100%";
- }
- 
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
+                                 .textfooter {
+                                     font-family: cursive;
+                                 }
+                                 
+                                 .textInput {
+                                     margin: "30px";
+                                     width: "100%";
+                                 }
+                                 
+                                 @tailwind base;
+                                 @tailwind components;
+                                 @tailwind utilities;

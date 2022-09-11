@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./buttons/Login";
-import Signup from "./buttons/Signup";
+//import Signup from "./buttons/Signup";
 import MyImage from "./images/Eshoplogo.png";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
