@@ -64,12 +64,14 @@ export default function Products() {
   } else {
     return (
       <>
-        <nav
-          className="flex pl-64 mt-10 text-slate-900"
+       
+
+          <nav
+          className="flex ml-5 lg:ml-64 mt-10 mb-0 text-slate-900"
           aria-label="Breadcrumb"
         >
-          <ol className="inline-flex items-center space-x-1 md:space-x-3">
-            <li className="inline-flex items-center">
+          <ol className="inline-flex   space-x-1 md:space-x-3">
+            <li className="inline-flex  ">
               <svg
                 className="w-4 h-4 mr-2"
                 fillRule="currentColor"
@@ -80,14 +82,14 @@ export default function Products() {
               </svg>
               <Link
                 to="/"
-                className="inline-flex items-center text-sm font-medium  hover:text-orange-400 "
+                className="inline-flex items-start text-sm font-medium  hover:text-orange-400 "
                 aria-current="page"
               >
                 Home
               </Link>
             </li>
             <li>
-              <div className="flex items-center">
+              <div className="flex  ">
                 <svg
                   className="w-6 h-6 text-slate-900"
                   fillRule="currentColor"
@@ -108,8 +110,9 @@ export default function Products() {
           </ol>
         </nav>
 
-        <div className="mt-5 mb-20">
+        <div className=" mb-20">
           <div className="grid grid-flow-row-dense grid-cols-12 grid-rows-1">
+           
             <div className="col-span-12 lg:col-span-2  mx-2 mt-20">
               <div className="relative text-gray-600 focus-within:text-gray-400">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -130,14 +133,14 @@ export default function Products() {
                   name="search-form"
                   id="search-form"
                   className="search-input w-full  p-4  text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-slate-900 focus:bg-white focus:text-gray-900"
-                  autoComplete="off"
+                  autoComplete="on"
                   placeholder="Search by name "
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
                 />
               </div>
 
-              <div className=" ">
+              <div className="">
                 <select
                   onChange={(e) => {
                     setFilterParam(e.target.value);
@@ -165,7 +168,14 @@ export default function Products() {
               </div>
             </div>
 
-            <div className="col-span-12  lg:col-span-10 ">
+
+
+
+
+
+
+
+            <div className="mt-0 col-span-12  lg:col-span-10 ">
               <div className="px-4 py-16 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
                 <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                   {search(data).map((item) => (
@@ -204,8 +214,13 @@ export default function Products() {
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
+
+       
+      
       </>
     );
   }
