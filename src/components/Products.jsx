@@ -64,9 +64,7 @@ export default function Products() {
   } else {
     return (
       <>
-       
-
-          <nav
+        <nav
           className="flex ml-5 lg:ml-64 mt-10 mb-0 text-slate-900"
           aria-label="Breadcrumb"
         >
@@ -110,9 +108,10 @@ export default function Products() {
           </ol>
         </nav>
 
+        <div className="mb-0 mt-3 border-b-4 ml-4 mr-3 lg:ml-64 lg:mr-10"> </div>
+
         <div className=" mb-20">
           <div className="grid grid-flow-row-dense grid-cols-12 grid-rows-1">
-           
             <div className="col-span-12 lg:col-span-2  mx-2 mt-20">
               <div className="relative text-gray-600 focus-within:text-gray-400">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -145,7 +144,7 @@ export default function Products() {
                   onChange={(e) => {
                     setFilterParam(e.target.value);
                   }}
-                  className="custom-select mt-5 rounded-md w-full py-4 lg:p-4 text-sm bg-gray-300 text-slate-900 dark:text-slate-800"
+                  className="px-3 custom-select mt-5 rounded-md w-full py-4 lg:p-4 text-sm bg-gray-300 text-slate-900 dark:text-slate-800"
                   aria-label="Filter Products By Company"
                 >
                   <option value="All" className="mx-2  font-bold uppercase">
@@ -167,13 +166,6 @@ export default function Products() {
                 <span className="focus"></span>
               </div>
             </div>
-
-
-
-
-
-
-
 
             <div className="mt-0 col-span-12  lg:col-span-10 ">
               <div className="px-4 py-16 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
@@ -214,13 +206,8 @@ export default function Products() {
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
-
-       
-      
       </>
     );
   }

@@ -6,7 +6,8 @@ import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import {addToCart} from '../redux/cartSlice';
-
+ import { useSelector } from "react-redux";
+ 
 
 function Product() {
   let { id } = useParams();
@@ -14,8 +15,9 @@ function Product() {
   const [image, setImage] = useState(null);
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { name, company, description, price, quantity = 0 } = product || {};
+  const { name, company, description, price } = product || {};
 
+ 
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -179,19 +181,19 @@ function Product() {
                     ${price}
                   </span>
 
-                  <button
-                    className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
-                    onClick={() =>
+                  <button className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
+                    onClick=
+                    {() =>
                       dispatch(
                         addToCart({
                           id,
                           name,
+                          image,
                           price,
                         })
                       )
                     }
-                  >
-                    Add to Cart
+                    > Add to Cart
                   </button>
 
                   <Link

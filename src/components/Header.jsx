@@ -5,8 +5,7 @@ import MyImage from "./images/Eshoplogo.png";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
-
-
+ 
 export default function Header() {
   // store product at cart btn
   const cart = useSelector((state) => state.cart);
