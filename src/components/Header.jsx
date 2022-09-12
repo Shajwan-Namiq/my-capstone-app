@@ -4,8 +4,21 @@ import Login from "./buttons/Login";
 import MyImage from "./images/Eshoplogo.png";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
+
 
 export default function Header() {
+  // store product at cart btn
+  const cart = useSelector((state) => state.cart);
+
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
+
   return (
     <>
       <nav className="bg-white border-gray-200 dark:bg-slate-50">
@@ -28,11 +41,10 @@ export default function Header() {
               <div>
                 <Login />
               </div>
-            
+
               {/**<div>
                 <Signup />
               </div>*/}
-              
             </div>
 
             <div>
@@ -41,6 +53,7 @@ export default function Header() {
                 className="relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
                 to="/cart"
               >
+                <p>{getTotalQuantity() || 0}</p>
                 <FaShoppingCart size={25} />
               </Link>
             </div>
@@ -92,3 +105,5 @@ export default function Header() {
     </>
   );
 }
+
+
