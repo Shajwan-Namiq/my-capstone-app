@@ -56,8 +56,8 @@ export default function Header() {
                 to="/cart"
                 onClick={() => navigate("/cart")}
               >
-                <FaShoppingCart size={25} />
                 <p> {getTotalQuantity() || 0} </p>
+                <FaShoppingCart size={25} />
               </Link>
             </div>
           </div>

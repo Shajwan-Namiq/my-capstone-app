@@ -1,4 +1,4 @@
-import Total from "../Total";
+import Total from "./Total";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 
@@ -9,7 +9,10 @@ function Cart() {
     <div className="cart">
       <div className="cart__left">
         <div>
-          <h3> Shopping Cart </h3>{" "}
+          <div class="flex justify-between border-b m-10 pb-8">
+            <h1 class="font-semibold text-2xl">Shopping Cart</h1>
+            
+          </div>
           {cart?.map((item) => (
             <CartItem
               key={item.id}
@@ -22,6 +25,8 @@ function Cart() {
           ))}
         </div>
       </div>
+
+   
 
       <div className="cart__right">
         <Total />
