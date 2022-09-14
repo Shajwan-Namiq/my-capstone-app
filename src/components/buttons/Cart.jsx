@@ -9,9 +9,8 @@ function Cart() {
     <div className="cart">
       <div className="cart__left">
         <div>
-          <div class="flex justify-between border-b m-10 pb-8">
-            <h1 class="font-semibold text-2xl">Shopping Cart</h1>
-            
+          <div className="flex justify-between border-b m-10 pb-8">
+            <h1 className="font-semibold text-2xl">Shopping Cart</h1>
           </div>
           {cart?.map((item) => (
             <CartItem
@@ -25,8 +24,6 @@ function Cart() {
           ))}
         </div>
       </div>
-
-   
 
       <div className="cart__right">
         <Total />

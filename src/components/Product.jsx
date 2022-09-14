@@ -4,10 +4,8 @@ import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
- import { useDispatch } from "react-redux";
- import { addToCart } from "../redux/cartSlice";
-
-
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
 function Product() {
   let { id } = useParams();
@@ -16,9 +14,8 @@ function Product() {
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
   const { name, company, description, price } = product || {};
- 
- const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
 
   useEffect(() => {
     (async () => {

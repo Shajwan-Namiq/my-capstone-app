@@ -38,7 +38,7 @@ export default function Subscribe() {
 
   return (
     <div>
-      <section className="bg-white dark:bg-gray-900">
+      <section className=" bg-gray-900">
         <div className="container px-8 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
             Join us from anywhere and get the 25% off
