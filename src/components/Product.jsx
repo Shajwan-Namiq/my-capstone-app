@@ -4,10 +4,10 @@ import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import {addToCart} from '../redux/cartSlice';
- import { useSelector } from "react-redux";
- 
+ import { useDispatch } from "react-redux";
+ import { addToCart } from "../redux/cartSlice";
+
+
 
 function Product() {
   let { id } = useParams();
@@ -16,9 +16,9 @@ function Product() {
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
   const { name, company, description, price } = product || {};
-
  
-  const dispatch = useDispatch();
+ const dispatch = useDispatch();
+
 
   useEffect(() => {
     (async () => {
@@ -181,9 +181,9 @@ function Product() {
                     ${price}
                   </span>
 
-                  <button className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
-                    onClick=
-                    {() =>
+                  <button
+                    className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
+                    onClick={() =>
                       dispatch(
                         addToCart({
                           id,
@@ -193,7 +193,8 @@ function Product() {
                         })
                       )
                     }
-                    > Add to Cart
+                  >
+                    Add to Cart
                   </button>
 
                   <Link

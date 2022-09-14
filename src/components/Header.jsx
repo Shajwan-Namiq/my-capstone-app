@@ -4,19 +4,22 @@ import Login from "./buttons/Login";
 import MyImage from "./images/Eshoplogo.png";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { useSelector } from 'react-redux';
- 
-export default function Header() {
-  // store product at cart btn
-  const cart = useSelector((state) => state.cart);
+ import { useNavigate } from "react-router-dom";
+ import { useSelector } from "react-redux";
 
-  const getTotalQuantity = () => {
-    let total = 0;
-    cart.forEach((item) => {
-      total += item.quantity;
-    });
-    return total;
-  };
+export default function Header() {
+ 
+  
+    const navigate = useNavigate();
+    const cart = useSelector((state) => state.cart);
+
+    const getTotalQuantity = () => {
+      let total = 0;
+      cart.forEach((item) => {
+        total += item.quantity;
+      });
+      return total;
+    };
 
   return (
     <>
@@ -51,9 +54,10 @@ export default function Header() {
                 type="button"
                 className="relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
                 to="/cart"
+                onClick={() => navigate("/cart")}
               >
-                <p>{getTotalQuantity() || 0}</p>
                 <FaShoppingCart size={25} />
+                <p> {getTotalQuantity() || 0} </p>
               </Link>
             </div>
           </div>

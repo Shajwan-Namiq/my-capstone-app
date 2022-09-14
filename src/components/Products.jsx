@@ -112,7 +112,7 @@ export default function Products() {
 
         <div className=" mb-20">
           <div className="grid grid-flow-row-dense grid-cols-12 grid-rows-1">
-            <div className="col-span-12 lg:col-span-2  mx-2 mt-20">
+            <div className="col-span-12 lg:col-span-2  mx-2 mt-10">
               <div className="relative text-gray-600 focus-within:text-gray-400">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                   <svg
@@ -168,7 +168,7 @@ export default function Products() {
             </div>
 
             <div className="mt-0 col-span-12  lg:col-span-10 ">
-              <div className="px-4 py-16 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+              <div className="px-4 py-16 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 ">
                 <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                   {search(data).map((item) => (
                     <div
