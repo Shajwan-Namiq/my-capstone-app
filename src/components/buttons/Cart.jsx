@@ -21,13 +21,14 @@ function Cart() {
               name={item.name}
               price={item.price}
               colorschange={item.colorschange}
+              imageshow={item.imageshow}
               quantity={item.quantity}
             />
           ))}
         </div>
       </div>
-
-      <div className="cart__right">
+     
+      <div className=" ">
         <Total />
       </div>
     </div>

@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
 import {
   incrementQuantity,
   decrementQuantity,
   removeItem,
 } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 
-function CartItem({ id, company, name, colorschange, price, quantity = 0 }) {
+function CartItem({
+  id,
+  company,
+  name,
+  colorschange,
+  price,
+  imageshow,
+  quantity = 0,
+}) {
   const dispatch = useDispatch();
 
-   
-    
   return (
     <>
       <div className="container mx-auto ">
@@ -34,22 +38,24 @@ function CartItem({ id, company, name, colorschange, price, quantity = 0 }) {
 
             <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
               <div className="flex w-2/4">
-                {/* <div className="w-20">
-                  <img className="" src={image} alt="item" />
-                 </div>*/}
+                <div className=" h-32">
+                  <img className="w-full h-full" src={imageshow} alt="item" />
+                </div>
                 <div className="flex flex-col justify-between ml-4 flex-grow">
                   <span className="font-bold text-slate-900 text-sm">
                     {" "}
-                    Name product: {name}
+                    <span className="text-gray-600">product:</span>
+                    <span className="uppercase "> {name}</span>
                   </span>
 
-                  <span className="font-bold text-slate-900  text-xs">
-                    Company Name : {company}
+                  <span className="mt-2 font-bold text-slate-900  text-xs">
+                    <span className="text-gray-600 ">Company:</span>{" "}
+                    <span className="uppercase"> {company} </span>
                   </span>
 
-                  <div class="flex">
-                    <div class="mt-4  font-bold text-slate-900  text-xs">
-                    Color :
+                  <div className="flex">
+                    <div className="mt-4 font-bold text-slate-900  text-xs">
+                      <span className="text-gray-600">Color:</span>
                     </div>
                     <div
                       style={{ backgroundColor: colorschange }}
@@ -107,6 +113,7 @@ function CartItem({ id, company, name, colorschange, price, quantity = 0 }) {
             </div>
           </div>
         </div>
+        <hr />
       </div>
     </>
   );

@@ -11,6 +11,7 @@ function Product() {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
   const [image, setImage] = useState(null);
+  const [imageshow, setImageshow] = useState(image);
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
   const { name, company, description, price} = product || {};
@@ -35,6 +36,22 @@ function Product() {
       setImage(product?.images[0]?.thumbnails);
     }
   }, [product]);
+
+
+
+useEffect(() => {
+  if (product) {
+    setImageshow(image?.large?.url);
+  }
+}, [product]);
+
+    {
+      console.log(imageshow);
+    }
+   
+  
+
+
 
   const Loading = () => {
     return (
@@ -177,7 +194,6 @@ function Product() {
                   <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                     ${price}
                   </span>
-
                   <button
                     className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
                     onClick={() =>
@@ -186,6 +202,7 @@ function Product() {
                           id,
                           name,
                           company,
+                          imageshow,
                           colorschange,
                           price,
                         })
@@ -194,7 +211,7 @@ function Product() {
                   >
                     Add to Cart
                   </button>
-
+                
                   <Link
                     to="/cart"
                     className="flex text-slate-900   border-2 border-slate-900  py-2 px-4   hover:bg-orange-400 rounded"
