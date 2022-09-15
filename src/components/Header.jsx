@@ -52,7 +52,7 @@ export default function Header() {
             <div>
               <Link
                 type="button"
-                className="relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
+                className="indicator-item badge badge-secondary relative text-orange-400 transition-colors duration-200 transform dark:text-orange-400 hover:text-gray-600 dark:hover:text-gray-300"
                 to="/cart"
                 onClick={() => navigate("/cart")}
               >

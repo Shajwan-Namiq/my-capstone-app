@@ -108,7 +108,9 @@ export default function Products() {
           </ol>
         </nav>
 
-        <div className="mb-0 mt-3 border-b-4 ml-4 mr-3 lg:ml-64 lg:mr-10"> </div>
+        <div className="mb-0 mt-3 border-b-4 ml-4 mr-3 lg:ml-64 lg:mr-10">
+          {" "}
+        </div>
 
         <div className=" mb-20">
           <div className="grid grid-flow-row-dense grid-cols-12 grid-rows-1">
@@ -191,12 +193,12 @@ export default function Products() {
                         </div>
                       </span>
 
-                      <div className="px-5 pb-5 h-1/3">
+                      <div className="px-2 h-1/3">
                         <div className="mt-5 flex justify-between items-start">
                           <span className="text-2xl font-bold text-gray-900 dark:text-gray-900">
                             ${item.price}
                           </span>
-                          <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-orange-400 dark:text-gray-600">
+                          <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-gray-700 dark:text-gray-600">
                             {item.name}
                           </h5>
                         </div>

@@ -95,7 +95,7 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="px-4 py-2 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+        <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             {filter.slice(0, 8).map((product) => {
               return (
@@ -119,14 +119,17 @@ const Products = () => {
                     </div>
                   </span>
 
-                  <div className="px-5 pb-5 h-1/3">
+                  <div className="px-2">
                     <div className="mt-5 flex justify-between items-start">
+                     
+                      <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-gray-700 dark:text-gray-600">
+                        {product.name}
+                      </h5>
                       <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                         ${product.price}
                       </span>
-                      <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-orange-400 dark:text-gray-600">
-                        {product.name}
-                      </h5>
+
+                     
                     </div>
                   </div>
                 </div>
@@ -150,7 +153,7 @@ const Products = () => {
   return (
     <>
       
-          <h1 className="flex justify-center mt-20 mb-2  text-2xl text-slate-600 font-bold">
+          <h1 className="flex justify-center text-2xl text-slate-600 font-bold">
             Latest &nbsp;
             <span className="border-b-4 border-orange-400">Products</span>
             &nbsp; Furniture

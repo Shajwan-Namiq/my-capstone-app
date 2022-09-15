@@ -19,8 +19,8 @@ function CartItem({
   return (
     <>
       <div className="container mx-auto ">
-        <div className="flex shadow-md  first-letter:">
-          <div className="w-full bg-white px-10 py-5">
+        <div className="flex shadow-md">
+          <div className="w-full bg-[#d9d9d92e]  px-10 py-5">
             <div className="flex mt-10 mb-5">
               <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/4">
                 Product Details
@@ -36,36 +36,34 @@ function CartItem({
               </h3>
             </div>
 
-            <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+            <div className="flex items-center hover:bg-gray-200 -mx-8 px-6 py-5">
               <div className="flex w-2/4">
-                <div className=" h-32">
-                  <img className="w-full h-full" src={imageshow} alt="item" />
+                <div className="w-24">
+                  <img className="h-24" src={imageshow} alt="item" />
                 </div>
                 <div className="flex flex-col justify-between ml-4 flex-grow">
-                  <span className="font-bold text-slate-900 text-sm">
-                    {" "}
-                    <span className="text-gray-600">product:</span>
-                    <span className="uppercase "> {name}</span>
+                  <span className="uppercase font-bold text-xs lg:text-xl text-slate-900 ">
+                    {name}
                   </span>
 
-                  <span className="mt-2 font-bold text-slate-900  text-xs">
-                    <span className="text-gray-600 ">Company:</span>{" "}
-                    <span className="uppercase"> {company} </span>
+                  <span className="font-bold  text-xs lg:text-xl text-gray-600">
+                    {company}
                   </span>
 
                   <div className="flex">
-                    <div className="mt-4 font-bold text-slate-900  text-xs">
-                      <span className="text-gray-600">Color:</span>
-                    </div>
+                    <span className="mt-4 font-bold  text-xs text-gray-600 ">
+                      Color:
+                    </span>
+
                     <div
                       style={{ backgroundColor: colorschange }}
-                      className="ml-4 mt-2 h-10 w-10 rounded"
+                      className="ml-2 mt-3 lg:mt-2 w-5 h-5 lg:h-7 lg:w-7 rounded"
                     ></div>
                   </div>
                 </div>
               </div>
 
-              <div className="lg:mr-7 flex justify-center w-1/4">
+              <div className="  flex justify-center w-1/4">
                 <button onClick={() => dispatch(decrementQuantity(id))}>
                   <svg
                     className="fill-current text-gray-600 w-3"
@@ -74,7 +72,7 @@ function CartItem({
                     <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                   </svg>
                 </button>
-                <p className="mx-2 border text-center w-8"> {quantity} </p>
+                <p className="mx-2 border-2 border-slate-900 text-center w-5 h-6"> {quantity} </p>
 
                 <button onClick={() => dispatch(incrementQuantity(id))}>
                   <svg
@@ -86,12 +84,13 @@ function CartItem({
                 </button>
               </div>
 
-              <span className="lg:mr-7  text-center w-1/5 font-semibold text-sm">
+              <span className="lg:mr-7 text-orange-400 text-center w-1/5 font-semibold lg:text-xl">
                 $ {price}
               </span>
+             
               <div className="flex justify-center w-1/4">
                 <button
-                  className="  font-semibold hover:text-red-900 text-red-600 text-xs"
+                  className="font-semibold hover:text-red-900 text-red-600 text-xs"
                   onClick={() => dispatch(removeItem(id))}
                 >
                   <svg
