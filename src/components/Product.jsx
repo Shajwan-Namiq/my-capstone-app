@@ -13,7 +13,7 @@ function Product() {
   const [image, setImage] = useState(null);
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { name, company, description, price } = product || {};
+  const { name, company, description, price} = product || {};
 
   const dispatch = useDispatch();
 
@@ -185,7 +185,8 @@ function Product() {
                         addToCart({
                           id,
                           name,
-                          image,
+                          company,
+                          colorschange,
                           price,
                         })
                       )

@@ -1,6 +1,7 @@
  import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
 function Total() {
   const cart = useSelector((state) => state.cart);
 
@@ -51,5 +52,6 @@ function Total() {
     </>
   );
 }
+
 
 export default Total;

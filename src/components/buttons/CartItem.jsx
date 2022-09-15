@@ -5,10 +5,13 @@ import {
   removeItem,
 } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 
-function CartItem({ id, image, name, price, quantity = 0 }) {
+function CartItem({ id, company, name, colorschange, price, quantity = 0 }) {
   const dispatch = useDispatch();
 
+   
+    
   return (
     <>
       <div className="container mx-auto ">
@@ -28,14 +31,31 @@ function CartItem({ id, image, name, price, quantity = 0 }) {
                 Remove
               </h3>
             </div>
+
             <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
               <div className="flex w-2/4">
-                <div className="w-20">
+                {/* <div className="w-20">
                   <img className="" src={image} alt="item" />
-                </div>
+                 </div>*/}
                 <div className="flex flex-col justify-between ml-4 flex-grow">
-                  <span className="font-bold text-sm"> name : {name}</span>
-                  <span className="font-bold  text-xs">company name :</span>
+                  <span className="font-bold text-slate-900 text-sm">
+                    {" "}
+                    Name product: {name}
+                  </span>
+
+                  <span className="font-bold text-slate-900  text-xs">
+                    Company Name : {company}
+                  </span>
+
+                  <div class="flex">
+                    <div class="mt-4  font-bold text-slate-900  text-xs">
+                    Color :
+                    </div>
+                    <div
+                      style={{ backgroundColor: colorschange }}
+                      className="ml-4 mt-2 h-10 w-10 rounded"
+                    ></div>
+                  </div>
                 </div>
               </div>
 

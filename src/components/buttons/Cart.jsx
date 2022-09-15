@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 function Cart() {
   const cart = useSelector((state) => state.cart);
 
+  
   return (
     <div className="cart">
       <div className="cart__left">
@@ -16,9 +17,10 @@ function Cart() {
             <CartItem
               key={item.id}
               id={item.id}
-              image={item.image}
-              title={item.name}
+              company={item.company}
+              name={item.name}
               price={item.price}
+              colorschange={item.colorschange}
               quantity={item.quantity}
             />
           ))}
