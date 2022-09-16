@@ -6,6 +6,9 @@ import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { faBold } from "@fortawesome/free-solid-svg-icons";
 
 function Product() {
   let { id } = useParams();
@@ -14,7 +17,21 @@ function Product() {
   const [imageshow, setImageshow] = useState(image);
   const [colorschange, Setcolorschange] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { name, company, description, price} = product || {};
+  const { name, company, description, price } = product || {};
+
+  //create a toast message
+  const notify = () =>
+    toast.success("Congrats! You added an order", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      toastId: "notifyToast",
+    });
+
+    
 
   const dispatch = useDispatch();
 
@@ -37,18 +54,11 @@ function Product() {
     }
   }, [product]);
 
-
-
-useEffect(() => {
-  if (product) {
-    setImageshow(image?.large?.url);
-  }
-}, [product]);
-
-    
-  
-
-
+  useEffect(() => {
+    if (product) {
+      setImageshow(image?.large?.url);
+    }
+  }, [product]);
 
   const Loading = () => {
     return (
@@ -193,7 +203,8 @@ useEffect(() => {
                   </span>
                   <button
                     className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
-                    onClick={() =>
+                    onClick={() => {
+                      notify({});
                       dispatch(
                         addToCart({
                           id,
@@ -203,12 +214,21 @@ useEffect(() => {
                           colorschange,
                           price,
                         })
-                      )
-                    }
+                      );
+                    }}
                   >
                     Add to Cart
                   </button>
-                
+
+                  <ToastContainer
+                    toastStyle={{
+                      backgroundColor:"white",
+                      color: "#84a98c",
+                      fontWeight: "bold",
+                    }}
+                  />
+                 
+
                   <Link
                     to="/cart"
                     className="flex text-slate-900   border-2 border-slate-900  py-2 px-4   hover:bg-orange-400 rounded"
