@@ -51,44 +51,44 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-        <div className="mt-10 bg-[#e5e5e55f] grid justify-items-center ">
-          <div className="mt-5 mb-5 grid grid-cols-6 grid-flow-row text-center   text-slate-900">
+        <div className="mt-10 grid justify-items-center ">
+          <div className="bg-[#e5e5e55f]  mt-5 mb-5 grid grid-cols-6 grid-flow-row text-center   text-slate-900">
             <button
               onClick={() => setFilter(data)}
-              className="uppercase  flex justify-center border-x-2 hover:text-orange-400 text-xs  lg:text-lg  px-2  py-2"
+              className="uppercase  flex justify-center border-x-2 py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg  px-2  "
             >
               All
             </button>
 
             <button
               onClick={() => filterProduct("office")}
-              className="uppercase flex justify-center  border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
+              className="uppercase flex justify-center  border-x-2   py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg px-2  "
             >
               Office
             </button>
             <button
               onClick={() => filterProduct("living room")}
-              className="uppercase flex justify-center border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
+              className="uppercase flex justify-center border-x-2   py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg px-2  "
             >
               Living room
             </button>
 
             <button
               onClick={() => filterProduct("kitchen")}
-              className="uppercase flex justify-center border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
+              className="uppercase flex justify-center border-x-2   py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg px-2 "
             >
               Kitchen
             </button>
 
             <button
               onClick={() => filterProduct("bedroom")}
-              className="uppercase flex justify-center border-x-2 hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
+              className="uppercase flex justify-center border-x-2  py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg px-2"
             >
               Bedroom
             </button>
             <button
               onClick={() => filterProduct("dining")}
-              className="uppercase flex justify-center  border-x-2  hover:text-orange-400 text-xs  lg:text-lg px-2 py-2"
+              className="uppercase flex justify-center  border-x-2   py-4 hover:text-white hover:bg-orange-400 text-xs  lg:text-lg px-2 "
             >
               Dining
             </button>
@@ -121,15 +121,12 @@ const Products = () => {
 
                   <div className="px-2">
                     <div className="mt-5 flex justify-between items-start">
-                     
                       <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-gray-700 dark:text-gray-600">
                         {product.name}
                       </h5>
                       <span className="text-3xl font-bold text-gray-900 dark:text-gray-900">
                         ${product.price}
                       </span>
-
-                     
                     </div>
                   </div>
                 </div>
@@ -153,7 +150,7 @@ const Products = () => {
   return (
     <>
       
-          <h1 className="flex justify-center text-2xl text-slate-600 font-bold">
+          <h1 className="mt-20 flex justify-center text-2xl text-slate-600 font-bold">
             Latest &nbsp;
             <span className="border-b-4 border-orange-400">Products</span>
             &nbsp; Furniture

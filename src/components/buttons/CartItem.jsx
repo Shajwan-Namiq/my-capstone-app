@@ -1,9 +1,8 @@
-import {
-  incrementQuantity,
-  decrementQuantity,
-  removeItem,
-} from "../../redux/cartSlice";
+import {incrementQuantity,decrementQuantity,removeItem,} from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
+  
 
 function CartItem({
   id,
@@ -15,6 +14,21 @@ function CartItem({
   quantity = 0,
 }) {
   const dispatch = useDispatch();
+  
+  const [newPrice, Setnewprice] = useState(price);
+
+//find total pricr for each product
+useEffect(() => {
+  if(quantity) {
+  const x = price * quantity;
+   Setnewprice(x);
+  }
+}, );
+
+    
+  
+
+
 
   return (
     <>
@@ -63,7 +77,7 @@ function CartItem({
                 </div>
               </div>
 
-              <div className="  flex justify-center w-1/4">
+              <div className="lg:mr-5  flex justify-center w-1/4">
                 <button onClick={() => dispatch(decrementQuantity(id))}>
                   <svg
                     className="fill-current text-gray-600 w-3"
@@ -72,7 +86,10 @@ function CartItem({
                     <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                   </svg>
                 </button>
-                <p className="mx-2 border-2 border-slate-900 text-center w-5 h-6"> {quantity} </p>
+                <p className="mx-2 border-2  text-center w-5 h-6">
+                  {" "}
+                  {quantity}{" "}
+                </p>
 
                 <button onClick={() => dispatch(incrementQuantity(id))}>
                   <svg
@@ -85,9 +102,11 @@ function CartItem({
               </div>
 
               <span className="lg:mr-7 text-orange-400 text-center w-1/5 font-semibold lg:text-xl">
-                $ {price}
+                $ {newPrice}
               </span>
-             
+
+              
+
               <div className="flex justify-center w-1/4">
                 <button
                   className="font-semibold hover:text-red-900 text-red-600 text-xs"

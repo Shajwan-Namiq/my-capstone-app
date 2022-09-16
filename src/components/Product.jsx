@@ -45,10 +45,7 @@ useEffect(() => {
   }
 }, [product]);
 
-    {
-      console.log(imageshow);
-    }
-   
+    
   
 
 

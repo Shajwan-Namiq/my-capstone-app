@@ -146,7 +146,7 @@ export default function Products() {
                   onChange={(e) => {
                     setFilterParam(e.target.value);
                   }}
-                  className="px-3 custom-select mt-5 rounded-md w-full py-4 lg:p-4 text-sm bg-gray-300 text-slate-900 dark:text-slate-800"
+                  className="shadow-lg px-3 custom-select mt-5 rounded-md w-full py-4 lg:p-4   text-sm bg-gray-300 text-slate-900 dark:text-slate-800"
                   aria-label="Filter Products By Company"
                 >
                   <option value="All" className="mx-2  font-bold uppercase">
@@ -165,7 +165,6 @@ export default function Products() {
                     caressa
                   </option>
                 </select>
-                <span className="focus"></span>
               </div>
             </div>
 
