@@ -14,6 +14,7 @@
 ###### Search by products name
 ###### Filter by products Brand
 ###### Adding product to shopping cart
+###### Separate new products at home page by depending on the categories
 ###### Subscribe section
 ###### React Carousel Slider Component using REACT HOOKS 
 ###### contact page(embeding map +  form validation, and reset functionality is handled by react-hook-form. Once a user submits a valid form, EmailJS is used to send out an email of the completed contact form).
