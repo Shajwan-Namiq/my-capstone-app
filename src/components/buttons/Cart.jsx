@@ -13,7 +13,11 @@ function Cart() {
           <div className="flex justify-between border-b m-10 pb-8">
             <h1 className="font-semibold text-2xl">Shopping Cart</h1>
           </div>
+
+          
           {cart?.map((item) => (
+            
+            
             <CartItem
               key={item.id}
               id={item.id}
@@ -24,6 +28,9 @@ function Cart() {
               imageshow={item.imageshow}
               quantity={item.quantity}
             />
+
+
+
           ))}
         </div>
       </div>
