@@ -11,6 +11,7 @@
 ###### React-Router
 ###### React Redux
 ###### Tailwind Css 
+###### Using rest ApI (https://course-api.com/react-store-products)
 ###### Font Awesom 
 ###### Search by products name
 ###### Filter by products Brand
