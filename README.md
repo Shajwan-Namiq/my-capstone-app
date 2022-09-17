@@ -17,7 +17,7 @@
 ###### Separate new products at home page by depending on the categories
 ###### Subscribe section
 ###### React Carousel Slider Component using REACT HOOKS 
-###### contact page(embeding map +  form validation, and reset functionality is handled by react-hook-form. Once a user submits a valid form, EmailJS is used to send out an email of the completed contact form).
+###### Contact page(embeding map +  form validation, and reset functionality is handled by react-hook-form. Once a user submits a valid form, EmailJS is used to send out an email of the completed contact form).
 ###### Login and registration
-###### using formik for subscribe functionality
+###### Using formik for subscribe functionality
 
