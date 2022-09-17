@@ -1,5 +1,5 @@
 # Demo https://my-capstone-app-furniture.vercel.app/
-## Language HTML,CSS,JS(React js library),Frame work(Tailwind Css)
+## Language HTML,CSS,JS 
 # ESHOP (Ecommerice website)
 "furniture for home"
 
