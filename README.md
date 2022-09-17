@@ -1,5 +1,5 @@
-#Demo https://my-capstone-app-furniture.vercel.app/
-ESHOP (Ecommerice website)
+# Demo https://my-capstone-app-furniture.vercel.app/
+# ESHOP (Ecommerice website)
 "furniture for home"
 
 Tools :
