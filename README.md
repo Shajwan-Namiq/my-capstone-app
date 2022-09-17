@@ -13,6 +13,7 @@
 ###### Font Awesom 
 ###### Search by products name
 ###### Filter by products Brand
+###### React Redux
 ###### Adding product to shopping cart
 ###### Separate new products at home page by depending on the categories
 ###### Subscribe section
