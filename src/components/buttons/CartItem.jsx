@@ -17,7 +17,7 @@ function CartItem({
   
   const [newPrice, Setnewprice] = useState(price);
 
-//find total pricr for each product
+//find total price for each product
 useEffect(() => {
   if(quantity) {
   const x = price * quantity;

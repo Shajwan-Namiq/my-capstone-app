@@ -16,8 +16,7 @@ function Cart() {
 
           
           {cart?.map((item) => (
-            
-            
+             
             <CartItem
               key={item.id}
               id={item.id}

@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { faBold } from "@fortawesome/free-solid-svg-icons";
+import { faBold, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function Product() {
   let { id } = useParams();
@@ -31,10 +31,27 @@ function Product() {
       toastId: "notifyToast",
     });
 
-    
 
+    //adding product to sho
   const dispatch = useDispatch();
 
+  const shoppingCart = () => {
+      dispatch(
+        addToCart({
+          id,
+          name,
+          company,
+          imageshow,
+          colorschange,
+          price,
+        })
+        
+      );
+   //alert(colorschange);
+  };
+
+
+  
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -139,7 +156,7 @@ function Product() {
                 </li>
               </ol>
             </nav>
-
+         
             <div className="flex flex-wrap  ">
               <div className="w-full md:w-1/2 mt-6">
                 {image && (
@@ -205,16 +222,7 @@ function Product() {
                     className="flex  mr-2 ml-2  bg-slate-900 text-white  border-2  py-2 px-6   hover:bg-orange-400 rounded"
                     onClick={() => {
                       notify({});
-                      dispatch(
-                        addToCart({
-                          id,
-                          name,
-                          company,
-                          imageshow,
-                          colorschange,
-                          price,
-                        })
-                      );
+                      shoppingCart({});
                     }}
                   >
                     Add to Cart
@@ -222,12 +230,11 @@ function Product() {
 
                   <ToastContainer
                     toastStyle={{
-                      backgroundColor:"white",
+                      backgroundColor: "white",
                       color: "#84a98c",
                       fontWeight: "bold",
                     }}
                   />
-                 
 
                   <Link
                     to="/cart"
