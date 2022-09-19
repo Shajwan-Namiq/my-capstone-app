@@ -3,7 +3,7 @@
 # ESHOP (Ecommerice website)
 "furniture for home"
 
-![alt text](https://postimg.cc/m1GfwzmJ)
+![alt text](https://i.postimg.cc/m1GfwzmJ/img.png)
 
 
 
