@@ -3,7 +3,7 @@
 # ESHOP (Ecommerice website)
 "furniture for home"
 
- ![Web 1920 – 1@2x](https://user-images.githubusercontent.com/106581879/190992269-dc547c16-0dd1-4b5c-ba4d-bc2f38db19be.png)
+ ![my-capstone-app-furniture vercel app_ (2)](https://user-images.githubusercontent.com/106581879/190993449-79ef5091-b64a-444c-a0fd-c17e2035caec.png)
 
 
 ### Tools :
