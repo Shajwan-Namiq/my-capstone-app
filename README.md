@@ -25,8 +25,7 @@
 ###### React Carousel Slider Component using REACT HOOKS 
 ###### Contact page(embeding map +  form validation, and reset functionality is handled by react-hook-form. Once a user submits a valid form, EmailJS is used to send out an email of the completed contact form).
 
-###### To get the contact form working, you will need to add the  
-######## emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+###### To get the contact form working, you will need to add the emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
 
 
 ###### Login and registration
