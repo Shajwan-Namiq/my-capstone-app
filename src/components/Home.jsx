@@ -16,9 +16,9 @@ export default function Home() {
       <Features />
       <Section />
       <ProductsMain />
-      <Subscribe />
-      <Testimonial />
       <Blog />
+      <Testimonial />
+      <Subscribe />
     </>
   );
 }

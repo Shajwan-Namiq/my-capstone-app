@@ -2,21 +2,42 @@ import "./testimonial.css";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import data from "./data";
+ 
 
 const Testimonial = () => {
-  const [people] = useState(data);
+   const [posts, setPosts] = useState([]);
+  const [people] = useState(posts);
   const [index, setIndex] = useState(0);
 
+
+
+   
+
   useEffect(() => {
-    const lastIndex = people.length - 1;
+    fetch("https://testimonialapi.toolcarton.com/api")
+      .then((response) => response.json())
+      .then((data) => {
+        
+        setPosts(data);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+
+
+
+
+  useEffect(() => {
+    const lastIndex = posts.length - 1;
     if (index < 0) {
       setIndex(lastIndex);
     }
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, people]);
+  }, [index, posts]);
 
   useEffect(() => {
     let slider = setInterval(() => {
@@ -32,8 +53,9 @@ const Testimonial = () => {
       <>
         <section className="section">
           <div className="section-center ">
-            {people.map((item, indexPeople) => {
-              const { id, image, name, title, quote } = item;
+            {posts.map((post, indexPeople) => {
+              const { id, avatar, name, location, message, designation } = post;
+
               let position = "nextSlide2";
               if (indexPeople === index) {
                 position = "activeSlide2";
@@ -48,21 +70,23 @@ const Testimonial = () => {
               return (
                 <article className={position} key={id}>
                   <div className="mb-5 flex justify-center items-center">
-                    <img src={image} alt={name} className="person-img " />
+                    <img src={avatar} alt={name} className="person-img " />
                   </div>
 
-                  <div class=" slider__inner">
-                    <div class=" slider__contents">
-                      <quote>
+                  <div className="bg-slate-900 p-3 text-white rounded-tr-3xl   rounded-bl-3xl     slider__inner">
+                    <div className=" slider__contents">
+                      <p>
                         &rdquo; &nbsp;
-                        {quote}
+                        {message}
                         &nbsp; &rdquo;
-                      </quote>
+                      </p>
 
-                      <h2 class="mt-5 slider__caption text-orange-600">
-                        {name} | NylonCraft
+                      <h2 className="mt-5 slider__caption text-orange-400">
+                        {name} | {designation}
                       </h2>
-                      <h2 class="slider__caption text-slate-400">{title} </h2>
+                      <h2 className="slider__caption text-slate-400">
+                        {location}
+                      </h2>
                     </div>
                   </div>
                 </article>
@@ -104,27 +128,14 @@ const Testimonial = () => {
           </div>
         </section>
 
-        {/**  <div className="bg-slate-300  flex items-center justify-center    ">
-          <div className="flex items-center justify-center ">
-            {filter.map((product) => {
-              return (
-                <div className="" key={product.id}>
-              
-              
-               <p>{product.location}</p>
-
-                </div>
-              );
-            })}
-          </div>
-        </div> */}
+      
       </>
     );
   };
 
   return (
     <>
-      <h1 className="mt-20 mb-10 flex justify-center text-2xl text-slate-600 font-bold">
+      <h1 className="  flex justify-center text-2xl text-slate-600 font-bold">
         Testimonials
       </h1>
 
