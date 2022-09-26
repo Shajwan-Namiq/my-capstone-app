@@ -51,7 +51,7 @@ const Testimonial = () => {
   const ShowProducts = () => {
     return (
       <>
-        <section className="section">
+        <section className="section ">
           <div className="section-center ">
             {posts.map((post, indexPeople) => {
               const { id, avatar, name, location, message, designation } = post;
@@ -134,13 +134,15 @@ const Testimonial = () => {
   };
 
   return (
-    <>
-      <h1 className="  flex justify-center text-2xl text-slate-600 font-bold">
-        Testimonials
+    <div className="pt-5 bg-[#e5e5e557]">
+      
+      <h1 className="flex justify-center mt-10 mb-16  text-2xl text-slate-600 font-bold">
+        Tes
+        <span className="border-b-4 border-orange-400">timon</span>
+        ials
       </h1>
-
       {<ShowProducts />}
-    </>
+    </div>
   );
 };
 
