@@ -194,12 +194,12 @@ export default function Products() {
 
                       <div className="px-2 h-1/3">
                         <div className="mt-5 flex justify-between items-start">
-                          <span className="text-2xl font-bold text-gray-900 dark:text-gray-900">
-                            ${item.price}
-                          </span>
                           <h5 className="mt-2 float-left text-sm font-semibold tracking-tight text-gray-700 dark:text-gray-600">
                             {item.name}
                           </h5>
+                          <span className="text-2xl font-bold text-gray-900 dark:text-gray-900">
+                            ${item.price}
+                          </span>
                         </div>
                       </div>
                     </div>
