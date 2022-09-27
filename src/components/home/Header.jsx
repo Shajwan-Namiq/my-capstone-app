@@ -1,7 +1,7 @@
 import React from "react";
-import Login from "./buttons/Login";
+import Login from "../buttons/Login";
 //import Signup from "./buttons/Signup";
-import MyImage from "./images/Eshoplogo.png";
+import MyImage from "../images/Eshoplogo.png";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
  import { useNavigate } from "react-router-dom";
@@ -87,10 +87,10 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/sale"
                   className="text-gray-900 dark:text-gray-900   font-bold  hover:border-y-2 border-orange-400  hover:text-gray-700"
                 >
-                  About
+                  Sale
                 </Link>
               </li>
               <li>

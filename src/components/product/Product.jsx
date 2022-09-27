@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../home/LoadingSpinner";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
+import { addToCart } from "../../redux/cartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { faBold, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+ 
 
 function Product() {
   let { id } = useParams();

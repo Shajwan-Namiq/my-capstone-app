@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../home/LoadingSpinner";
 
 export default function Products() {
   const [error, setError] = useState(null);
