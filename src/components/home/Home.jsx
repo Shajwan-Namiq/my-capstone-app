@@ -1,4 +1,4 @@
-import Carousel from "../carousel/Carousel";
+import Carousel from "./carousel/Carousel"; 
 import React from "react";
 
 import Testimonial from "../testimonial/Testimonial";

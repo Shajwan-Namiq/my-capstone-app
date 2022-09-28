@@ -4,10 +4,19 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
+import "./stylebanner.css";
+import EShoplogo from "../images/Eshoplogo.png";
+import salea from "../images/salea.png";
+import saleb from "../images/saleb.png";
+import salec from "../images/salec.png";
+import saled from "../images/saled.png";
+
+
+
 
 export default function Sale() {
- 
- 
+ const [text, setText] = useState("%50");
+
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
@@ -43,15 +52,9 @@ export default function Sale() {
     );
   };
 
-   
-
- 
- 
   const ShowProducts = () => {
     return (
       <>
-         
-
         <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             {filter.slice(0, 4).map((product) => {
@@ -90,39 +93,53 @@ export default function Sale() {
               );
             })}
           </div>
-
-          
         </div>
       </>
     );
   };
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   return (
     <>
       <div>
         <section className="mx-5">
-          <h1 className=" text-3xl text-white font-bold bg-orange-400  px-8 py-10  flex justify-center items-center ">
-            <marquee behavior="alternate" direction="right">
-              The Super plus sale | Get the 25% off
-            </marquee>
-          </h1>
+          <div class="banner">
+            <div class="text-lg lg:text-6xl font-bold mt-6  text text1 banner-animation">
+              Find The Best Price From Here
+            </div>
+            <div class="text-base  lg:text-4xl font-bold mt-28 lg:mt-36  text text2 bannon  ">
+              " Thank you for shopping with us "
+            </div>
+            <div class="text-xl lg:text-6xl font-bold text text3  m-16 flex justify-center items-center">
+              Get off {text}
+            </div>
+
+            <div className="flex">
+              <div class="image image2">
+                <img src={saleb} className="w-48 h-48 mt-3 mx-28 " />
+              </div>
+              <div class="image image3">
+                <img src={salea} className="w-32 h-32  mx-10 " />
+              </div>
+              <div class="image image4">
+                <img src={saled} className="w-32 h-32   " />
+              </div>
+            </div>
+
+            <div class="m-3 flex  relative ">
+              <img
+                src={EShoplogo}
+                className="absolute top-0 right-0 w-20 h-20 lg:w-32 lg:h-32 "
+              />
+            </div>
+          </div>
         </section>
       </div>
 
       <br />
 
       {loading ? <Loading /> : <ShowProducts />}
+
+      <br />
     </>
   );
 }
