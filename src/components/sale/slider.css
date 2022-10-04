@@ -1,0 +1,27 @@
+.swiper-button-next {
+    color: rgb(205, 132, 37);
+    background-color: rgba(163, 154, 154, 0.497);
+    background-position: center;
+    padding: 20px;
+    font-size: 45px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.swiper-button-prev {
+    color: rgb(205, 132, 37);
+    background-color: rgba(163, 154, 154, 0.497);
+    background-position: center;
+    padding: 20px;
+    font-size: 45px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.swiper-scrollbar {
+    background: #9c9791;
+}
+
+.swiper-horizontal .swiper-scrollbar {
+    width: 50%!important;
+}
