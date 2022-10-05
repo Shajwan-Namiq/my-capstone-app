@@ -115,7 +115,7 @@ export default function Sale() {
                       </Link>
                     </div>
                       </figure>
-                      <div className="rounded-lg p-6 bg-[#0c042a] flex flex-col">
+                      <div className="rounded-lg p-4 bg-slate-900 flex flex-col">
                         <div>
                           <h5 className="mb-5 uppercase text-lg font-bold leading-none text-white">
                             {product.name}
