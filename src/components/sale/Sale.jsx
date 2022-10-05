@@ -106,16 +106,16 @@ export default function Sale() {
                           className="h-64 ml-auto mr-auto"
                         />
 
-                        <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-[#fbfffe87] opacity-0 group-hover:h-full group-hover:opacity-100 duration-500">
-                          <Link
-                            className="mt-5 px-8 py-3 rounded-full text-white  bg-slate-900 hover:bg-orange-400 duration-300"
-                            to={`/products/${product.id}/`}
-                          >
-                            <FaSearch size={30} />
-                          </Link>
-                        </div>
+                         <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-[#fbfffe87] opacity-0 group-hover:h-full group-hover:opacity-100 duration-500">
+                      <Link
+                        className="mt-5 px-8 py-3 rounded-full text-white  bg-slate-900 hover:bg-orange-400 duration-300"
+                        to={`/products/${product.id}/`}
+                      >
+                        <FaSearch size={30} />
+                      </Link>
+                    </div>
                       </figure>
-                      <div className="rounded-lg p-6 bg-slate-900 flex flex-col">
+                      <div className="rounded-lg p-6 bg-[#0c042a] flex flex-col">
                         <div>
                           <h5 className="mb-5 uppercase text-lg font-bold leading-none text-white">
                             {product.name}
@@ -147,12 +147,11 @@ export default function Sale() {
 
   return (
     <>
-      <div>
-        <Banner />
-      </div>
+      <Banner />
 
-      <div className=" mb-20">{loading ? <Loading /> : <ShowProducts />}</div>
-      
+      {loading ? <Loading /> : <ShowProducts />}
+
+      <div className="py-28 bg-[#edede9]"></div>
     </>
   );
 }
