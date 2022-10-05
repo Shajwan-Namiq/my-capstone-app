@@ -1,27 +1,34 @@
-.swiper-button-next {
-    color: rgb(205, 132, 37);
-    background-color: rgba(163, 154, 154, 0.497);
-    background-position: center;
-    padding: 20px;
-    font-size: 45px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.swiper-button-prev {
-    color: rgb(205, 132, 37);
-    background-color: rgba(163, 154, 154, 0.497);
-    background-position: center;
-    padding: 20px;
-    font-size: 45px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.swiper-scrollbar {
-    background: #9c9791;
-}
-
-.swiper-horizontal .swiper-scrollbar {
-    width: 50%!important;
-}
+ .swiper-button-next {
+     color: rgb(205, 132, 37);
+     background-position: center;
+     padding: 15px;
+     font-weight: bold;
+ }
+ 
+ .swiper-button-next:hover {
+     background-color: rgba(163, 154, 154, 0.497);
+     border-radius: 10px;
+ }
+ 
+ .swiper-button-prev {
+     color: rgb(205, 132, 37);
+     background-position: center;
+     padding: 15px;
+     font-weight: bold;
+ }
+ 
+ .swiper-button-prev:hover {
+     background-color: rgba(163, 154, 154, 0.497);
+     border-radius: 10px;
+ }
+ 
+ .swiper-scrollbar {
+     background: #ea860b;
+ }
+ 
+ .swiper-horizontal .swiper-scrollbar {
+     background-color: rgb(255, 255, 255);
+     height: 20px;
+     border: 2px solid #ec8507;
+     border-radius: 20px;
+ }

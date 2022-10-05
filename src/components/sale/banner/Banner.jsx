@@ -16,7 +16,7 @@ export default function Banner() {
   
     return (
       <div>
-        <section className="mx-5">
+        <section className=" ">
           <div className="banner">
             <div className="text-lg lg:text-6xl font-bold mt-6  text text1 banner-animation">
               Find The Best Price From Here
