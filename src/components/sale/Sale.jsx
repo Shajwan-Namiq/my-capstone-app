@@ -54,15 +54,16 @@ export default function Sale() {
  
 
    const discount = (newprice) => {
-    // const x = { newprice }.toString();
-    // const i = parseInt(x); 
+    
 
-     //const result=x ;
-   //  console.log(i);
+     const x = parseInt(newprice);
+     const y=(50/100);
+     const result= x-x*y;  
+     console.log(result);
      return (
        <>
-         <span>New Price </span>
-         <span></span>
+         <span>  $ {result}</span>
+          
        </>
      );
    };
@@ -74,7 +75,7 @@ export default function Sale() {
       <>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-          spaceBetween={5}
+          spaceBetween={2}
           slidesPerView={3}
           navigation
           scrollbar={{ draggable: true }}
@@ -84,9 +85,11 @@ export default function Sale() {
           breakpoints={{
             320: {
               slidesPerView: 1,
+              spaceBetweenSlides: 150,
             },
             768: {
               slidesPerView: 2,
+               
             },
             1060: {
               slidesPerView: 3,
@@ -95,7 +98,7 @@ export default function Sale() {
         >
           {filter.map((product) => (
             <SwiperSlide key={product.id} className="  ">
-              <div className=" flex items-center bg-[#edede9] w-screen min-h-screen ">
+              <div className="  flex items-center justify-center bg-[#edede9] w-screen min-h-screen ">
                 <div className="container ml-auto mr-auto flex flex-wrap items-start">
                   <div className="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 first-line: lg:pl-2 lg:pr-2">
                     <div className="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
@@ -106,14 +109,14 @@ export default function Sale() {
                           className="h-64 ml-auto mr-auto"
                         />
 
-                         <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-[#fbfffe87] opacity-0 group-hover:h-full group-hover:opacity-100 duration-500">
-                      <Link
-                        className="mt-5 px-8 py-3 rounded-full text-white  bg-slate-900 hover:bg-orange-400 duration-300"
-                        to={`/products/${product.id}/`}
-                      >
-                        <FaSearch size={30} />
-                      </Link>
-                    </div>
+                        <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-[#fbfffe87] opacity-0 group-hover:h-full group-hover:opacity-100 duration-500">
+                          <Link
+                            className="mt-5 px-8 py-3 rounded-full text-white  bg-slate-900 hover:bg-orange-400 duration-300"
+                            to={`/products/${product.id}/`}
+                          >
+                            <FaSearch size={30} />
+                          </Link>
+                        </div>
                       </figure>
                       <div className="rounded-lg p-4 bg-slate-900 flex flex-col">
                         <div>
@@ -128,7 +131,7 @@ export default function Sale() {
                               {" "}
                               $ {product.price}
                             </span>
-                            <span className="text-orange-400 mx-5">
+                            <span className="font-bold text-orange-400 mx-5">
                               {discount(product.price)}
                             </span>
                           </div>
