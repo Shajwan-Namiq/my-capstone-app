@@ -8,7 +8,7 @@ import salec from "../../images/salec.png";
 import saled from "../../images/saled.png";
 
 export default function Banner() {
-   const [text, setText] = useState("%50");
+   const [number, setnumber] = useState(50);
 
   
   
@@ -26,7 +26,7 @@ export default function Banner() {
             </div>
             <div className="text-xl lg:text-6xl font-bold text text3  m-16 flex justify-center items-center">
               Get off &nbsp;{" "}
-              <p className="bg-slate-900 rounded-full p-5"> {text}</p>
+              <p className="bg-slate-900 rounded-full p-5"> {number}%</p>
             </div>
 
             <div className="flex">

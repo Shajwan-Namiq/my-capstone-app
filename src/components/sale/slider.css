@@ -1,34 +1,30 @@
- .swiper-button-next {
-     color: rgb(205, 132, 37);
-     background-position: center;
-     padding: 15px;
-     font-weight: bold;
- }
- 
- .swiper-button-next:hover {
-     background-color: rgba(163, 154, 154, 0.497);
-     border-radius: 10px;
- }
- 
- .swiper-button-prev {
-     color: rgb(205, 132, 37);
-     background-position: center;
-     padding: 15px;
-     font-weight: bold;
- }
- 
- .swiper-button-prev:hover {
-     background-color: rgba(163, 154, 154, 0.497);
-     border-radius: 10px;
- }
- 
- .swiper-scrollbar {
-     background: #ea860b;
- }
- 
- .swiper-horizontal .swiper-scrollbar {
-     background-color: rgb(255, 255, 255);
-     height: 20px;
-     border: 2px solid #ec8507;
-     border-radius: 20px;
- }
+     .swiper-button-next {
+         color: rgb(205, 132, 37);
+         background-position: center;
+         padding: 15px;
+         font-weight: bold;
+     }
+     
+     .swiper-button-next:hover {
+         background-color: rgba(163, 154, 154, 0.497);
+         border-radius: 10px;
+     }
+     
+     .swiper-button-prev {
+         color: rgb(205, 132, 37);
+         background-position: center;
+         padding: 15px;
+         font-weight: bold;
+     }
+     
+     .swiper-button-prev:hover {
+         background-color: rgba(163, 154, 154, 0.497);
+         border-radius: 10px;
+     }
+     
+     .swiper-horizontal .swiper-scrollbar {
+         background-color: #edede9;
+         height: 20px;
+         border: 4px solid #023047;
+         margin-bottom: 70px;
+     }

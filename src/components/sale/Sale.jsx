@@ -14,11 +14,12 @@ import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from "swiper";
 import "./slider.css";
 
-
 export default function Sale() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
+  const [dis, setDiscount] = useState(50);
+
 
   let componentMounted = true;
 
@@ -51,34 +52,30 @@ export default function Sale() {
     );
   };
 
- 
-
-   const discount = (newprice) => {
+  const discount = (newprice) => {
+    const x = parseInt(newprice);
+    const y = dis / 100;
+    const result = x - x * y;
     
-
-     const x = parseInt(newprice);
-     const y=(50/100);
-     const result= x-x*y;  
-     console.log(result);
-     return (
-       <>
-         <span>  $ {result}</span>
-          
-       </>
-     );
-   };
-
-
+    return (
+      <>
+        <span>
+           
+          {"  "} ${result}
+        </span>
+      </>
+    );
+  };
 
   const ShowProducts = () => {
     return (
       <>
-        <Swiper
+        <Swiper 
           modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
           spaceBetween={2}
           slidesPerView={3}
-          navigation
-          scrollbar={{ draggable: true }}
+            navigation
+          scrollbar={{ draggable: true, dragSize: 150 }}
           style={{
             "--swiper-navigation-size": "15px",
           }}
@@ -89,7 +86,6 @@ export default function Sale() {
             },
             768: {
               slidesPerView: 2,
-               
             },
             1060: {
               slidesPerView: 3,
@@ -126,13 +122,18 @@ export default function Sale() {
                           <span className="text-xs text-gray-400 leading-none"></span>
                         </div>
                         <div className="flex items-center">
-                          <div className="text-lg text-white font-light">
-                            <span className="text-red-800 line-through ">
-                              {" "}
+                          <div className=" text-white ">
+                            <span className="text-sm text-gray-600 line-through ">
                               $ {product.price}
                             </span>
-                            <span className="font-bold text-orange-400 mx-5">
+
+                            <span className="text-lg font-bold text-orange-500 ">
                               {discount(product.price)}
+                            </span>
+                          </div>
+                          <div class="rounded-full bg-gray-800 text-white   w-20 h-16 flex ml-auto  ">
+                            <span className="font-bold text-sm p-3 rounded-full text-white bg-orange-500 mx-5">
+                              SAVE {dis}%
                             </span>
                           </div>
                         </div>
