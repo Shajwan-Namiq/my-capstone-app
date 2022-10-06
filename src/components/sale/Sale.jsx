@@ -94,10 +94,10 @@ export default function Sale() {
         >
           {filter.map((product) => (
             <SwiperSlide key={product.id} className="  ">
-              <div className="  flex items-center justify-center bg-[#edede9] w-screen min-h-screen ">
+              <div className="  flex items-center justify-center bg-white w-screen min-h-screen ">
                 <div className="container ml-auto mr-auto flex flex-wrap items-start">
-                  <div className="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 first-line: lg:pl-2 lg:pr-2">
-                    <div className="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <div className="w-full md:w-1/2 lg:w-1/4 pl-10 pr-14 first-line: lg:pl-8 lg:pr-2">
+                    <div className="  rounded-lg m-h-64   transform hover:translate-y-2 hover:shadow-xl transition duration-300">
                       <figure className="mb-2 group relative ">
                         <img
                           src={product.image}
@@ -155,7 +155,7 @@ export default function Sale() {
 
       {loading ? <Loading /> : <ShowProducts />}
 
-      <div className="py-28 bg-[#edede9]"></div>
+      <div className="py-10 bg-white"></div>
     </>
   );
 }
